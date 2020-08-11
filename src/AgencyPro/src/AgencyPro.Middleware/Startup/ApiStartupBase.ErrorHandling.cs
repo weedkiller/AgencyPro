@@ -75,7 +75,7 @@ namespace AgencyPro.Middleware.Startup
                 error.Status = StatusCodes.Status400BadRequest;
             }
 
-            error.SupportLink = "support@ideafortune.com";
+            error.SupportLink = "support@agencypro.com";
         }
     }
 }

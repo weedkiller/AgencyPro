@@ -1,1 +1,1 @@
-﻿angular.module('ideafortune',[]);
+﻿angular.module('agencypro',[]);

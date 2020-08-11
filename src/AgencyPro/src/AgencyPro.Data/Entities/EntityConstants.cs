@@ -33,7 +33,7 @@ namespace AgencyPro.Data.Entities
         public static decimal DefaultAccountManagerStream => 5m;
 
         public static string DefaultOrgImageUrl =>
-            "https://www.ideafortune.com/images/blank_agency_logo.png";
+            "https://www.agencypro.com/images/blank_agency_logo.png";
 
         public static string DefaultMarketerCode => "";
         public static string PortfolioUrl => null;

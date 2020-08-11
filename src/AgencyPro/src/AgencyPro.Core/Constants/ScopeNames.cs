@@ -4,7 +4,7 @@ namespace AgencyPro.Core.Constants
 {
     public static class ScopeNames
     {
-        // core ideafortune api scopes
+        // core agencypro api scopes
         public const string MarketerScope = "ma_api";
         public const string RecruiterScope = "re_api";
         public const string AccountManagerScope = "am_api";

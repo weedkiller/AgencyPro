@@ -4,7 +4,7 @@ namespace AgencyPro.Core.Constants
 {
     public class CacheKey
     {
-        // core ideafortune cache keys
+        // core cache keys
         public const string Marketer = "ma_cache";
         public const string Recruiter = "re_cache";
         public const string AccountManager = "am_cache";

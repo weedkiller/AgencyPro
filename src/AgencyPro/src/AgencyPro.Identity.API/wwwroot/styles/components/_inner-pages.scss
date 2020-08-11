@@ -117,19 +117,19 @@
 }
 
 
-.ideafortune-comparison {
+.agencypro-comparison {
   
     
 }
 
 
-.ideafortune-comparison-outer {
+.agencypro-comparison-outer {
     max-width: $tablet; 
     margin:2em  auto 0 auto; 
 
 }
 
-.ideafortune-comparison-item {
+.agencypro-comparison-item {
     display: flex; 
      
     &:first-child {
@@ -140,7 +140,7 @@
     }
 }
 
-.ideafortune-comparison-column {
+.agencypro-comparison-column {
     width: 45%; 
     display: flex; 
 
@@ -151,7 +151,7 @@
     
 }
 
-.ideafortune-comparison-column-space {
+.agencypro-comparison-column-space {
     flex: 1; text-align: center; 
     color: $red; 
     display: flex; 
@@ -160,7 +160,7 @@
     font-size: pxToEm(26);
 }
 
-.ideafortune-comparison-box {
+.agencypro-comparison-box {
     background: #fff;
     box-shadow: 0px 4px 5px rgba(0,0,0,0.1);
     padding: 2em; 
