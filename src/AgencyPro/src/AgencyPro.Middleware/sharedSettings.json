@@ -54,12 +54,12 @@
       "Description": "The Agency Platform",
       "Keywords": "",
       "TermsOfService": "",
-      "Copyright": "Copyright © 2019 AgencyPro LLC, All rights reserved",
-      "HomePage": "https://www.agencypro.com/",
+      "Copyright": "Copyright © 2019 IdeaFortune, All rights reserved",
+      "HomePage": "https://www.github.com/rodmjay/agencypro",
       "ContactName": "Rod Johnson",
       "ContactEmail": "support@agencypro.com",
-      "LicenseName": "Proprietary",
-      "LicenseUrl": "https://www.agencypro.com"
+      "LicenseName": "Apache",
+      "LicenseUrl": "https://github.com/rodmjay/AgencyPro/blob/master/license.txt"
     },
     "Twilio": {
       "Sid": "<enter your own>",
