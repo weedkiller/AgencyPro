@@ -1,0 +1,24 @@
+@mixin mq($key, $value) {
+  @media screen and ($key: $value) {
+    @content;
+  }
+}
+
+@mixin mq-min($width) {
+  @include mq(min-width, $width) {
+    @content;
+  }
+}
+
+@mixin mq-max($width) {
+  @include mq(max-width, $width) {
+    @content;
+  }
+}
+
+
+@mixin mq-range($min, $max) {
+  @media only screen and (max-width: $max) and (min-width: $min)  {
+    @content; 
+  }
+}

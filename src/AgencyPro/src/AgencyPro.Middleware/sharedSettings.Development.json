@@ -1,0 +1,33 @@
+﻿{
+  "AppSettings": {
+    "ASPNETCORE_ENVIRONMENT": "Development",
+    "PandaDocs": {
+      "ApiKey": "<enter your own>"
+    },
+    "Stripe": {
+
+      // dev-rod
+      "WebhookSigningKey": "<enter your own>",
+      "SecretApiKey": "<enter your own>",
+      "PublicApiKey": "<enter your own>",
+      "ClientId": "<enter your own>",
+      "RedirectUri": "https://localhost:44374/callback/stripe"
+
+
+    },
+    "Email": {
+      "FromName": "<enter your own>",
+      "FromEmail": "<enter your own>",
+      "ApiKey": "<enter your own>",
+      "SendMail": "true"
+    },
+    "Twilio": {
+      "Sid": "<enter your own>",
+      "Token": "<enter your own>",
+      "BaseUri": "https://api.twilio.com",
+      "RequestUri": "/2010-04-01/Accounts/<enter your own>/Messages.json",
+      "From": "<enter your own>"
+    }
+
+  }
+}

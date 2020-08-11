@@ -1,0 +1,45 @@
+@model AgencyPro.Core.Organizations.ViewModels.OrganizationCreateInput
+
+<main class="two-cols-nav">
+    <partial name="_SideNav" />
+    <div class="right-col is-flex">
+        <div class="box has-gap-left has-gap-right is-borderless is-shadowless">
+            <div class="page-heading">
+                <h1 class="page-title">New Organization</h1>
+            </div>
+
+            <div class="box is-fullwidth has-gap-left has-gap-right is-borderless is-shadowless">
+                <partial name="_ValidationSummary" />
+                <form asp-controller="Organization" asp-action="New">
+                    <div class="field">
+                        <div class="field">
+                            <label asp-for="Name" class="label">Name</label>
+                            <div class="control has-icons-left">
+                                <input class="input validate" asp-for="Name" placeholder="Name" autofocus="" type="text"
+                                       id="Name" name="Name">
+                                <span class="icon is-small is-left">
+                                    <i class="fa fa-envelope"></i>
+                                </span>
+                            </div>
+                        </div>
+                       
+                        <div class="field">
+                            <label asp-for="Description" class="label">Description</label>
+                            <div class="control has-icons-left">
+                                <input class="input validate" asp-for="Description" placeholder="Description" autofocus="" type="text"
+                                       id="Description" name="Description">
+                                <span class="icon is-small is-left">
+                                    <i class="fa fa-envelope"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <button class="button is-primary is-fullwidth" name="button" value="create">Create</button>
+                        </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</main>
+

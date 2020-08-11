@@ -1,0 +1,15 @@
+﻿@using IdeaFortune.Mailer
+@using IdeaFortune.Mailer.TagHelpers
+@model IdeaFortune.Core.Stories.Emails.AgencyOwnerStoryEmail
+@{
+    Layout = null;
+}
+
+<div>
+    @Model.Introduction()
+
+    @Model.StoryCreated(Model)
+    
+    @Model.Footer(SectionType.AgencyOwner, Model.ProviderOrganizationName)
+
+</div>

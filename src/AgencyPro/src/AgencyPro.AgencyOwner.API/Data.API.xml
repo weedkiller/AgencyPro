@@ -1,0 +1,1398 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AgencyPro.AgencyOwner.API</name>
+    </assembly>
+    <members>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.AccountController.GetAccounts(System.Guid,AgencyPro.Core.Common.CommonFilters)">
+            <summary>
+                Get all accounts for the current account manager
+            </summary>
+            <param name="organizationId"></param>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.AccountController.GetAccount(System.Guid,System.Int32)">
+            <summary>
+                Get acct for the current account manager
+            </summary>
+            <param name="organizationId"></param>
+            <param name="accountId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.AccountController.CreateAccount(System.Guid,AgencyPro.Core.CustomerAccounts.ViewModels.NewCustomerAccountInput)">
+            <summary>
+                Create and return a new account
+            </summary>
+            <param name="organizationId"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.AccountController.CreateInternalAccount(System.Guid,System.Guid)">
+            <summary>
+            Creates an internal account (buyer account for the current organization)
+            </summary>
+            <param name="organizationId"></param>
+            <param name="accountManagerId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.AccountController.UpdateAccount(System.Guid,System.Int32,AgencyPro.Core.CustomerAccounts.ViewModels.CustomerAccountInput)">
+            <summary>
+                Updates an account and returns it
+            </summary>
+            <param name="organizationId"></param>
+            <param name="accountId"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.AccountController.LinkAccount(System.Guid,AgencyPro.Core.CustomerAccounts.ViewModels.LinkCustomerWithCompanyInput)">
+            <summary>
+                Link an existing account
+            </summary>
+            <param name="organizationId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.AccountController.DeleteAccount(System.Guid,System.Int32)">
+            <summary>
+                Deletes an account
+            </summary>
+            <param name="organizationId"></param>
+            <param name="accountId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.AccountController.Deactivate(System.Guid,System.Int32)">
+            <summary>
+            deactivates an account
+            </summary>
+            <param name="organizationId"></param>
+            <param name="number"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.AccountController.CreateComment(System.Guid,System.Int32,AgencyPro.Core.Comments.ViewModels.CommentInput)">
+            <summary>
+            Add comment to a customer account
+            </summary>
+            <param name="organizationId"></param>
+            <param name="accountId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.AccountManagerController.GetAccountManagerList(System.Guid,AgencyPro.Core.OrganizationPeople.Filters.AccountManagerFilters)">
+            <summary>
+               Get account managers within an organization
+            </summary>
+            <param name="organizationId"></param>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.AccountManagerController.GetAccountManagerStatistics(System.Guid,AgencyPro.Core.OrganizationPeople.Filters.AccountManagerFilters,AgencyPro.Core.Common.CommonFilters)">
+            <summary>
+               Get account managers within an organization
+            </summary>
+            <param name="organizationId"></param>
+            <param name="filters"></param>
+            <param name="pagingFilters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.AccountManagerController.GetAccountManager(System.Guid,System.Guid)">
+            <summary>
+               Get a specific account manager within an organization
+            </summary>
+            <param name="organizationId"></param>
+            <param name="personId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.AccountManagerController.UpdateAccountManager(System.Guid,System.Guid,AgencyPro.Core.OrganizationRoles.ViewModels.OrganizationAccountManagers.OrganizationAccountManagerInput)">
+            <summary>
+                Update an account manager within an organization
+            </summary>
+            <param name="organizationId"></param>
+            <param name="personId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.AccountManagerController.AddAccountManager(System.Guid,System.Guid,AgencyPro.Core.OrganizationRoles.ViewModels.OrganizationAccountManagers.OrganizationAccountManagerInput)">
+            <summary>
+            adds an existing account manager to the org
+            </summary>
+            <param name="organizationId"></param>
+            <param name="personId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.AccountManagerController.DeleteAccountManager(System.Guid,System.Guid)">
+            <summary>
+            removes a person from the account manager role within an organization
+            </summary>
+            <param name="organizationId"></param>
+            <param name="personId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.BillingCategoryController.GetBillingCategories(System.Guid,System.Nullable{System.Guid})">
+            <summary>
+            Get billing categories
+            </summary>
+            <param name="organizationId"></param>
+            <param name="projectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.BillingCategoryController.AddBillingCategory(System.Guid,System.Int32)">
+            <summary>
+            Adds a billing category to an organization
+            </summary>
+            <param name="organizationId"></param>
+            <param name="billingCategoryId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.BillingCategoryController.RemoveBillingCategory(System.Guid,System.Int32)">
+            <summary>
+            Removes a billing category from an organization
+            </summary>
+            <param name="organizationId"></param>
+            <param name="billingCategoryId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.CandidateController.GetCandidates(System.Guid,AgencyPro.Core.Common.CommonFilters)">
+            <summary>
+                Gets all pending candidates
+            </summary>
+            <param name="organizationId"></param>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.CandidateController.GetCandidate(System.Guid,System.Guid)">
+            <summary>
+                Gets a candidate by Id
+            </summary>
+            <param name="organizationId">the org id</param>
+            <param name="candidateId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.CandidateController.UpdateCandidate(System.Guid,System.Guid,AgencyPro.Core.Candidates.ViewModels.CandidateInput)">
+            <summary>
+                Updates a candidate
+            </summary>
+            <param name="organizationId"></param>
+            <param name="candidateId"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.CandidateController.QualifyCandidate(System.Guid,System.Guid,AgencyPro.Core.Candidates.ViewModels.CandidateQualifyInput)">
+            <summary>
+                Approves a candidate 
+            </summary>
+            <param name="organizationId"></param>
+            <param name="candidateId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.CandidateController.RejectCandidate(System.Guid,System.Guid,AgencyPro.Core.Candidates.ViewModels.CandidateRejectionInput)">
+            <summary>
+                Rejects a candidate
+            </summary>
+            <param name="organizationId"></param>
+            <param name="candidateId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.CandidateController.DeleteCandidate(System.Guid,System.Guid)">
+            <summary>
+                deletes a candidate
+            </summary>
+            <param name="organizationId"></param>
+            <param name="candidateId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.CandidateController.AddComment(System.Guid,System.Guid,AgencyPro.Core.Comments.ViewModels.CommentInput)">
+            <summary>
+            Add comment to a candidate
+            </summary>
+            <param name="organizationId"></param>
+            <param name="candidateId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.ChartController.Get(System.Guid,AgencyPro.Core.TimeEntries.ViewModels.TimeMatrixFilters)">
+            <summary>
+                Gets a searchable matrix of time segments
+            </summary>
+            <param name="organizationId"></param>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.ContractController.GetProviderContracts(System.Guid,AgencyPro.Core.Contracts.Filters.ContractFilters)">
+            <summary>
+                Get contracts
+            </summary>
+            <param name="organizationId">the organization id</param>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.ContractController.GetMarketingContracts(System.Guid,AgencyPro.Core.Contracts.Filters.ContractFilters)">
+            <summary>
+            get marketing contracts
+            </summary>
+            <param name="organizationId"></param>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.ContractController.GetRecruitingContracts(System.Guid,AgencyPro.Core.Contracts.Filters.ContractFilters)">
+            <summary>
+            get recruiting contracts
+            </summary>
+            <param name="organizationId"></param>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.ContractController.CreateContract(System.Guid,AgencyPro.Core.Contracts.ViewModels.ContractInput)">
+            <summary>
+            creates a new contract
+            </summary>
+            <param name="organizationId">the organization id</param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.ContractController.GetContract(System.Guid,System.Guid)">
+            <summary>
+                Gets a contract by id
+            </summary>
+            <param name="organizationId">the organization id</param>
+            <param name="contractId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.ContractController.GetMarketingContract(System.Guid,System.Guid)">
+            <summary>
+            Get marketing contract
+            </summary>
+            <param name="organizationId"></param>
+            <param name="contractId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.ContractController.GetRecruitingContract(System.Guid,System.Guid)">
+            <summary>
+            Get recruiting contract
+            </summary>
+            <param name="organizationId"></param>
+            <param name="contractId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.ContractController.UpdateContract(System.Guid,System.Guid,AgencyPro.Core.Contracts.ViewModels.UpdateProviderContractInput)">
+            <summary>
+                Updates a contract 
+            </summary>
+            <param name="organizationId"></param>
+            <param name="contractId"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.ContractController.UpdateContract(System.Guid,System.Guid,AgencyPro.Core.Contracts.ViewModels.UpdateMarketingContractInput)">
+            <summary>
+            update marketing contract
+            </summary>
+            <param name="organizationId"></param>
+            <param name="contractId"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.ContractController.Pause(System.Guid,System.Guid)">
+            <summary>
+                Pauses a contract 
+            </summary>
+            <param name="organizationId"></param>
+            <param name="contractId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.ContractController.DeleteContract(System.Guid,System.Guid)">
+            <summary>
+                Deletes a contract
+            </summary>
+            <param name="organizationId"></param>
+            <param name="contractId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.ContractController.EndContract(System.Guid,System.Guid)">
+            <summary>
+                ends a contract 
+            </summary>
+            <param name="organizationId"></param>
+            <param name="contractId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.ContractController.RestartContract(System.Guid,System.Guid)">
+            <summary>
+                restarts a contract 
+            </summary>
+            <param name="organizationId"></param>
+            <param name="contractId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.ContractController.AddComment(System.Guid,System.Guid,AgencyPro.Core.Comments.ViewModels.CommentInput)">
+            <summary>
+            Add comment to a contract
+            </summary>
+            <param name="organizationId"></param>
+            <param name="contractId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.ContractorController.DeleteContractor(System.Guid,System.Guid)">
+            <summary>
+            removes a person from the contractor role within an organization
+            </summary>
+            <param name="organizationId"></param>
+            <param name="personId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.ContractorController.GetContractors(System.Guid,AgencyPro.Core.OrganizationPeople.Filters.ContractorFilters)">
+            <summary>
+            gets contractors within an organization
+            </summary>
+            <param name="organizationId"></param>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.ContractorController.GetContractorStatistics(System.Guid,AgencyPro.Core.OrganizationPeople.Filters.ContractorFilters,AgencyPro.Core.Common.CommonFilters)">
+            <summary>
+            gets contractors within an organization
+            </summary>
+            <param name="organizationId"></param>
+            <param name="filters"></param>
+            <param name="pagingFilters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.ContractorController.GetContractor(System.Guid,System.Guid)">
+            <summary>
+            Gets contractor record within an organization
+            </summary>
+            <param name="organizationId"></param>
+            <param name="personId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.ContractorController.UpdateContractor(System.Guid,System.Guid,AgencyPro.Core.OrganizationRoles.ViewModels.OrganizationContractors.OrganizationContractorInput)">
+            <summary>
+            update a contractor within an organization
+            </summary>
+            <param name="organizationId"></param>
+            <param name="personId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.ContractorController.UpdateContractorRecruiter(System.Guid,System.Guid,AgencyPro.Core.OrganizationRoles.ViewModels.OrganizationContractors.UpdateContractorRecruiterInput)">
+            <summary>
+            update a contractor within an organization
+            </summary>
+            <param name="organizationId"></param>
+            <param name="personId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.ContractorController.AddContractor(System.Guid,System.Guid,AgencyPro.Core.OrganizationRoles.ViewModels.OrganizationContractors.OrganizationContractorInput)">
+            <summary>
+            adds an existing contractor to an organization
+            </summary>
+            <param name="organizationId"></param>
+            <param name="personId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.CustomerController.GetCustomerList(System.Guid)">
+            <summary>
+            Get list of customers
+            </summary>
+            <param name="organizationId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.FinancialAccountController.GetStripeUrl(System.Guid)">
+            <summary>
+            gets the stripe url to login to express dashboard
+            </summary>
+            <param name="organizationId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.FinancialAccountController.GetAuthUrl(System.Guid)">
+            <summary>
+            gets the stripe auth url to connect express account
+            </summary>
+            <param name="organizationId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.FinancialAccountController.GetFinancialAccount(System.Guid)">
+            <summary>
+            gets the financial account of the current user if there is one
+            </summary>
+            <param name="organizationId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.InvoiceController.GetInvoiceSummary(System.Guid)">
+            <summary>
+            Gets a summary of projects for invoicing
+            </summary>
+            <param name="organizationId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.InvoiceController.GetInvoiceSummaryDetails(System.Guid,System.Guid)">
+            <summary>
+            Gets the details of project for invoicing
+            </summary>
+            <param name="organizationId"></param>
+            <param name="projectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.InvoiceController.GetInvoice(System.Guid,System.String)">
+            <summary>
+                Get the invoice by id
+            </summary>
+            <param name="organizationId"></param>
+            <param name="invoiceId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.InvoiceController.GetInvoices(System.Guid,AgencyPro.Core.Invoices.Filters.InvoiceFilters)">
+            <summary>
+                gets invoices from ao perspective
+            </summary>
+            <param name="organizationId"></param>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.InvoiceController.CreateInvoice(System.Guid,AgencyPro.Core.Invoices.ViewModels.InvoiceInput)">
+            <summary>
+                Generates an invoice
+            </summary>
+            <param name="organizationId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.InvoiceController.FinalizeInvoice(System.Guid,System.String)">
+            <summary>
+                Generates an invoice
+            </summary>
+            <param name="organizationId"></param>
+            <param name="invoiceId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.InvoiceController.SendInvoice(System.Guid,System.String)">
+            <summary>
+            Send invoice to customer
+            </summary>
+            <param name="organizationId"></param>
+            <param name="invoiceId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.InvoiceSummaryController.GetInvoiceSummaryDetails(System.Guid,System.Guid)">
+            <summary>
+            Gets the details of project for invoicing
+            </summary>
+            <param name="organizationId"></param>
+            <param name="projectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.LeadController.RejectLead(System.Guid,System.Guid,AgencyPro.Core.Leads.ViewModels.LeadRejectInput)">
+            <summary>
+                rejects a lead
+            </summary>
+            <param name="organizationId"></param>
+            <param name="leadId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.LeadController.DeleteLead(System.Guid,System.Guid)">
+            <summary>
+                deletes a lead
+            </summary>
+            <param name="organizationId"></param>
+            <param name="leadId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.LeadController.UpdateLead(System.Guid,System.Guid,AgencyPro.Core.Leads.ViewModels.LeadInput)">
+            <summary>
+                updates a lead
+            </summary>
+            <param name="organizationId">the organization id</param>
+            <param name="leadId">the lead id</param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.LeadController.QualifyLead(System.Guid,System.Guid,AgencyPro.Core.Leads.ViewModels.LeadQualifyInput)">
+            <summary>
+                qualifies a lead
+            </summary>
+            <param name="organizationId">the organization id</param>
+            <param name="leadId">the lead id</param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.LeadController.GetLeads(System.Guid,AgencyPro.Core.Common.CommonFilters)">
+            <summary>
+                Provider agency leads
+            </summary>
+            <param name="organizationId">the organization id</param>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.LeadController.GetMarketingAgencyLeads(System.Guid,AgencyPro.Core.Common.CommonFilters)">
+            <summary>
+            Marketing agency Leads
+            </summary>
+            <param name="organizationId"></param>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.LeadController.GetLead(System.Guid,System.Guid)">
+            <summary>
+                get lead details for provider agency owner
+            </summary>
+            <param name="organizationId">the org id</param>
+            <param name="leadId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.LeadController.GetMarketingLead(System.Guid,System.Guid)">
+            <summary>
+            Get lead details for marketing agency owner
+            </summary>
+            <param name="organizationId"></param>
+            <param name="leadId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.LeadController.AddComment(System.Guid,System.Guid,AgencyPro.Core.Comments.ViewModels.CommentInput)">
+            <summary>
+            Add comment to a lead
+            </summary>
+            <param name="organizationId"></param>
+            <param name="leadId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.MarketerController.GetMarketerList(System.Guid,AgencyPro.Core.OrganizationPeople.Filters.MarketerFilters)">
+            <summary>
+            get marketers within an organization
+            </summary>
+            <param name="organizationId"></param>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.MarketerController.GetMarketer(System.Guid,System.Guid)">
+            <summary>
+            get a specific marketer in organization
+            </summary>
+            <param name="organizationId"></param>
+            <param name="personId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.MarketerController.GetMarketerStatistics(System.Guid,AgencyPro.Core.OrganizationPeople.Filters.MarketerFilters,AgencyPro.Core.Common.CommonFilters)">
+            <summary>
+            get marketers within an organization
+            </summary>
+            <param name="organizationId"></param>
+            <param name="filters"></param>
+            <param name="pagingFilters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.MarketerController.AddMarketer(System.Guid,System.Guid,AgencyPro.Core.OrganizationRoles.ViewModels.OrganizationMarketers.OrganizationMarketerInput)">
+            <summary>
+            Adds an existing person to an organization
+            </summary>
+            <param name="organizationId"></param>
+            <param name="personId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.MarketerController.UpdateMarketer(System.Guid,System.Guid,AgencyPro.Core.OrganizationRoles.ViewModels.OrganizationMarketers.OrganizationMarketerInput)">
+            <summary>
+            update marketer within an organization
+            </summary>
+            <param name="organizationId"></param>
+            <param name="personId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.MarketerController.DeleteMarketer(System.Guid,System.Guid)">
+            <summary>
+            removes a person from the marketer role within an organization
+            </summary>
+            <param name="organizationId"></param>
+            <param name="personId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.MarketingAgreementController.CreateProviderAgreement(System.Guid,System.Guid)">
+            <summary>
+            creates agreement from the marketing agency perspective
+            </summary>
+            <param name="organizationId"></param>
+            <param name="providerOrganizationId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.MarketingAgreementController.AcceptProviderAgreement(System.Guid,System.Guid)">
+            <summary>
+            Accept agreement 
+            </summary>
+            <param name="organizationId"></param>
+            <param name="providerOrganizationId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.OrganizationController.Get(System.Guid)">
+            <summary>
+                Gets the organization information from the perspective of currently logged-in account manager
+            </summary>
+            <param name="organizationId">the organization id</param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.OrganizationController.AddBillingCategory(System.Guid,System.Int32)">
+            <summary>
+            Adds a billing category to an organization
+            </summary>
+            <param name="organizationId"></param>
+            <param name="billingCategoryId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.OrganizationController.RemoveBillingCategory(System.Guid,System.Int32)">
+            <summary>
+            Removes a billing category from an organization
+            </summary>
+            <param name="organizationId"></param>
+            <param name="billingCategoryId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.OrganizationController.Update(System.Guid,AgencyPro.Core.Organizations.ViewModels.OrganizationUpdateInput)">
+            <summary>
+            Update organization settings
+            </summary>
+            <param name="organizationId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.OrganizationController.Update(System.Guid,AgencyPro.Core.Organizations.ProviderOrganizations.ViewModels.ProviderOrganizationInput)">
+            <summary>
+            update provider settings
+            </summary>
+            <param name="organizationId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.OrganizationController.Update(System.Guid,AgencyPro.Core.Organizations.RecruitingOrganizations.ViewModels.RecruitingOrganizationInput)">
+            <summary>
+            update recruiting settings
+            </summary>
+            <param name="organizationId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.OrganizationController.Update(System.Guid,AgencyPro.Core.Organizations.MarketingOrganizations.ViewModels.MarketingOrganizationInput)">
+            <summary>
+            update marketing settings
+            </summary>
+            <param name="organizationId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.OrganizationController.UpdateOrganizationPic(System.Guid,Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+                Updates an organization logo (200x200px is best)
+            </summary>
+            <param name="organizationId"></param>
+            <param name="logo">The logo to upload</param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.PaymentTermController.GetPaymentTerms(System.Guid)">
+            <summary>
+            Gets payment terms for organization
+            </summary>
+            <param name="organizationId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.PaymentTermController.AddPaymentTermToOrganization(System.Guid,System.Int32)">
+            <summary>
+            Add payment term to organization
+            </summary>
+            <param name="organizationId"></param>
+            <param name="paymentTermId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.PaymentTermController.RemovePaymentTermFromOrganization(System.Guid,System.Int32)">
+            <summary>
+            Removes a payment term from an organization
+            </summary>
+            <param name="organizationId"></param>
+            <param name="paymentTermId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.PayoutController.GetPayouts(System.Guid,AgencyPro.Core.PayoutIntents.Models.PayoutFilters)">
+            <summary>
+            gets pending payouts from the platform to the organization
+            </summary>
+            <param name="organizationId"></param>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.PayoutController.Disperse(System.Guid,System.String)">
+            <summary>
+            Disperse funds from invoice
+            </summary>
+            <param name="organizationId"></param>
+            <param name="invoiceId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.PeopleController.CreatePerson(System.Guid,AgencyPro.Core.OrganizationPeople.ViewModels.CreateOrganizationPersonInput)">
+            <summary>
+                creates a new person with options to add to several roles
+            </summary>
+            <param name="organizationId">the organization id</param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.PeopleController.AddPerson(System.Guid,AgencyPro.Core.OrganizationPeople.ViewModels.AddExistingPersonInput)">
+            <summary>
+                adds an existing person to the organization
+            </summary>
+            <param name="organizationId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.PeopleController.RemovePerson(System.Guid,System.Guid)">
+            <summary>
+                removes a person from the organization
+            </summary>
+            <param name="organizationId"></param>
+            <param name="personId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.PeopleController.GetPerson(System.Guid,System.Guid)">
+            <summary>
+                gets a person by id
+            </summary>
+            <param name="organizationId">the organization id</param>
+            <param name="personId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.PeopleController.GetPeopleInOrganization(System.Guid,AgencyPro.Core.OrganizationPeople.OrganizationPeopleFilters)">
+            <summary>
+                gets all people in an organization
+            </summary>
+            <param name="organizationId">the organization id</param>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.PositionController.GetPositions(System.Guid)">
+            <summary>
+            Gets the positions of the organization
+            </summary>
+            <param name="organizationId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.PositionController.AddPosition(System.Guid,System.Int32)">
+            <summary>
+            Add position to an organization 
+            </summary>
+            <param name="organizationId"></param>
+            <param name="positionId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.PositionController.RemovePosition(System.Guid,System.Int32)">
+            <summary>
+            Removes a position from an organization
+            </summary>
+            <param name="organizationId"></param>
+            <param name="positionId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.ProjectController.GetProjectsForAgencyOwner(System.Guid,AgencyPro.Core.Projects.Filters.ProjectFilters)">
+            <summary>
+                Get projects
+            </summary>
+            <param name="organizationId">the organization id</param>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.ProjectController.UpdateProject(System.Guid,System.Guid,AgencyPro.Core.Projects.ViewModels.UpdateProjectInput)">
+            <summary>
+                Updates a project
+            </summary>
+            <param name="organizationId"></param>
+            <param name="projectId"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.ProjectController.CreateProject(System.Guid,AgencyPro.Core.Projects.ViewModels.ProjectInput)">
+            <summary>
+                Adds a project
+            </summary>
+            <param name="organizationId">the organization id</param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.ProjectController.DeleteProject(System.Guid,System.Guid)">
+            <summary>
+                deletes a project
+            </summary>
+            <param name="organizationId"></param>
+            <param name="projectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.ProjectController.GetProject(System.Guid,System.Guid)">
+            <summary>
+                Gets a project
+            </summary>
+            <param name="organizationId"></param>
+            <param name="projectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.ProjectController.PauseProject(System.Guid,System.Guid)">
+            <summary>
+                Pause a project
+            </summary>
+            <param name="organizationId">the organization id</param>
+            <param name="projectId">the project id</param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.ProjectController.RestartProject(System.Guid,System.Guid)">
+            <summary>
+            Restarts a project
+            </summary>
+            <param name="organizationId"></param>
+            <param name="projectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.ProjectController.EndProject(System.Guid,System.Guid)">
+            <summary>
+            Ends a project
+            </summary>
+            <param name="organizationId"></param>
+            <param name="projectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.ProjectController.AddComment(System.Guid,System.Guid,AgencyPro.Core.Comments.ViewModels.CommentInput)">
+            <summary>
+            Add comment to a project
+            </summary>
+            <param name="organizationId"></param>
+            <param name="projectId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.ProjectManagerController.DeleteProjectManager(System.Guid,System.Guid)">
+            <summary>
+            removes a person from the project manager role within an organization
+            </summary>
+            <param name="organizationId"></param>
+            <param name="personId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.ProjectManagerController.UpdateProjectManager(System.Guid,System.Guid,AgencyPro.Core.OrganizationRoles.ViewModels.OrganizationProjectManagers.OrganizationProjectManagerInput)">
+            <summary>
+                Updates a project manager within an organization
+            </summary>
+            <param name="organizationId"></param>
+            <param name="personId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.ProjectManagerController.GetProjectManagerList(System.Guid,AgencyPro.Core.OrganizationPeople.Filters.ProjectManagerFilters)">
+            <summary>
+                Gets project managers within an organization
+            </summary>
+            <param name="organizationId"></param>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.ProjectManagerController.GetProjectManager(System.Guid,System.Guid)">
+            <summary>
+            get a specific project manager in organization
+            </summary>
+            <param name="organizationId"></param>
+            <param name="personId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.ProjectManagerController.GetProjectManagerStatistics(System.Guid,AgencyPro.Core.OrganizationPeople.Filters.ProjectManagerFilters,AgencyPro.Core.Common.CommonFilters)">
+            <summary>
+                Gets project managers within an organization
+            </summary>
+            <param name="organizationId"></param>
+            <param name="filter"></param>
+            <param name="pagingFilters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.ProjectManagerController.AddProjectManager(System.Guid,System.Guid,AgencyPro.Core.OrganizationRoles.ViewModels.OrganizationProjectManagers.OrganizationProjectManagerInput)">
+            <summary>
+            adds an existing project manager to an organization
+            </summary>
+            <param name="organizationId"></param>
+            <param name="personId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.ProposalController.GetProposals(System.Guid,AgencyPro.Core.Proposals.Filters.ProposalFilters)">
+            <summary>
+                get all proposals
+            </summary>
+            <param name="organizationId"></param>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.ProposalController.GetProposal(System.Guid,System.Guid)">
+            <summary>
+                gets proposal by id
+            </summary>
+            <param name="organizationId"></param>
+            <param name="proposalId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.ProposalController.GetProposalPdf(System.Guid,System.Guid)">
+            <summary>
+                download proposal pdf
+            </summary>
+            <param name="organizationId"></param>
+            <param name="proposalId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.ProposalController.Create(System.Guid,System.Guid,AgencyPro.Core.Proposals.ViewModels.ProposalOptions)">
+            <summary>
+                submits a proposal
+            </summary>
+            <param name="organizationId"></param>
+            <param name="projectId"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.ProposalController.DeleteProposal(System.Guid,System.Guid)">
+            <summary>
+                delete a proposal
+            </summary>
+            <param name="organizationId"></param>
+            <param name="projectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.ProposalController.SendProposal(System.Guid,System.Guid)">
+            <summary>
+            Sends the proposal to the customer
+            </summary>
+            <param name="organizationId"></param>
+            <param name="projectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.ProposalController.RevokeProposal(System.Guid,System.Guid)">
+            <summary>
+            Revokes the proposal so it can be edited.
+            </summary>
+            <param name="organizationId"></param>
+            <param name="projectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.ProposalController.UpdateProposal(System.Guid,System.Guid,AgencyPro.Core.Proposals.ViewModels.ProposalOptions)">
+            <summary>
+            updates a proposal
+            </summary>
+            <param name="organizationId"></param>
+            <param name="projectId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.ProposalController.AcceptProposal(System.Guid,System.Guid)">
+            <summary>
+                accept proposal by id
+            </summary>
+            <param name="organizationId"></param>
+            <param name="proposalId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.ProviderAgreementController.GetMarketingAgreements(System.Guid)">
+            <summary>
+            Get marketing agreements from provider agency owner's perspective
+            </summary>
+            <param name="organizationId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.ProviderAgreementController.GetMarketingAgreement(System.Guid,System.Guid)">
+            <summary>
+            Get marketing agreement from provider agency owner's perspective
+            </summary>
+            <param name="organizationId"></param>
+            <param name="marketingOrganizationId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.ProviderAgreementController.CreateDefaultMarketingAgreement(System.Guid,System.Guid)">
+            <summary>
+            Creates marketing agreement with marketing agency from provider agency owner's perspective
+            </summary>
+            <param name="organizationId"></param>
+            <param name="marketingOrganizationId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.ProviderAgreementController.GetRecruitingAgreements(System.Guid)">
+            <summary>
+            Gets recruiting agreements with recruiting agency from a provider agency owner's perspective
+            </summary>
+            <param name="organizationId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.ProviderAgreementController.GetRecruitingAgreement(System.Guid,System.Guid)">
+            <summary>
+            Gets the recruiting agreement from provider agency owner's perspective
+            </summary>
+            <param name="organizationId"></param>
+            <param name="recruitingOrganizationId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.RecruiterController.DeleteRecruiter(System.Guid,System.Guid)">
+            <summary>
+            removes a person from the recruiter role within an organization
+            </summary>
+            <param name="organizationId"></param>
+            <param name="personId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.RecruiterController.GetRecruiterList(System.Guid,AgencyPro.Core.OrganizationPeople.Filters.RecruiterFilters)">
+            <summary>
+            Gets all the recruiters in an organization
+            </summary>
+            <param name="organizationId"></param>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.RecruiterController.GetRecruiterStatistics(System.Guid,AgencyPro.Core.OrganizationPeople.Filters.RecruiterFilters,AgencyPro.Core.Common.CommonFilters)">
+            <summary>
+            Gets recruiters for organization with statistical data
+            </summary>
+            <param name="organizationId"></param>
+            <param name="filters"></param>
+            <param name="pagingFilters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.RecruiterController.GetRecruiter(System.Guid,System.Guid)">
+            <summary>
+            get a specific recruiter in organization
+            </summary>
+            <param name="organizationId"></param>
+            <param name="recruiterId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.RecruiterController.UpdateRecruiter(System.Guid,System.Guid,AgencyPro.Core.OrganizationRoles.ViewModels.OrganizationRecruiters.OrganizationRecruiterInput)">
+            <summary>
+                Update recruiter within an organization
+            </summary>
+            <param name="organizationId"></param>
+            <param name="personId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.RecruiterController.AddRecruiter(System.Guid,System.Guid,AgencyPro.Core.OrganizationRoles.ViewModels.OrganizationRecruiters.OrganizationRecruiterInput)">
+            <summary>
+                adds an existing recruiter to an organization
+            </summary>
+            <param name="organizationId"></param>
+            <param name="personId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.RecruitingAgreementController.CreateProviderAgreement(System.Guid,System.Guid,AgencyPro.Core.Agreements.ViewModels.RecruitingAgreementInput)">
+            <summary>
+            creates agreement from the recruiting agency perspective
+            </summary>
+            <param name="organizationId"></param>
+            <param name="providerOrganizationId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.RecruitingAgreementController.AcceptProviderAgreement(System.Guid,System.Guid)">
+            <summary>
+            Accept agreement 
+            </summary>
+            <param name="organizationId"></param>
+            <param name="providerOrganizationId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.SkillController.GetSkills(System.Guid)">
+            <summary>
+            Gets the skills of the organization
+            </summary>
+            <param name="organizationId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.SkillController.AddSkill(System.Guid,System.Guid,AgencyPro.Core.Skills.ViewModels.OrganizationSkillInput)">
+            <summary>
+            Add skill to an organization 
+            </summary>
+            <param name="organizationId"></param>
+            <param name="skillId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.SkillController.UpdateSkill(System.Guid,System.Guid,AgencyPro.Core.Skills.ViewModels.OrganizationSkillInput)">
+            <summary>
+            Update the organization skill
+            </summary>
+            <param name="organizationId"></param>
+            <param name="skillId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.SkillController.RemoveSkill(System.Guid,System.Guid)">
+            <summary>
+            Removes a skill from an organization
+            </summary>
+            <param name="organizationId"></param>
+            <param name="skillId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.StoryController.GetStories(System.Guid,AgencyPro.Core.Stories.Filters.StoryFilters)">
+            <summary>
+                Gets stories
+            </summary>
+            <param name="organizationId">the organization id</param>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.StoryController.GetStory(System.Guid,System.Guid)">
+            <summary>
+                Get story as agency owner
+            </summary>
+            <param name="organizationId"></param>
+            <param name="storyId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.StoryController.CreateStory(System.Guid,AgencyPro.Core.Stories.ViewModels.CreateStoryInput)">
+            <summary>
+                Creates a story for a project
+            </summary>
+            <param name="organizationId">the organization id</param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.StoryController.UpdateStory(System.Guid,System.Guid,AgencyPro.Core.Stories.ViewModels.UpdateStoryInput)">
+            <summary>
+                Updates a story
+            </summary>
+            <param name="organizationId"></param>
+            <param name="storyId"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.StoryController.AssignStory(System.Guid,System.Guid,AgencyPro.Core.Stories.ViewModels.AssignStoryInput)">
+            <summary>
+            assign a story to a contractor within the organization
+            </summary>
+            <param name="organizationId"></param>
+            <param name="storyId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.StoryController.DeleteStory(System.Guid,System.Guid)">
+            <summary>
+                deletes a story
+            </summary>
+            <param name="organizationId"></param>
+            <param name="storyId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.StoryController.AddComment(System.Guid,System.Guid,AgencyPro.Core.Comments.ViewModels.CommentInput)">
+            <summary>
+            Add comment to a story
+            </summary>
+            <param name="organizationId"></param>
+            <param name="storyId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.StoryTemplateController.GetStoryTemplates(System.Guid,AgencyPro.Core.Common.CommonFilters)">
+            <summary>
+            Get story templates for organization
+            </summary>
+            <param name="organizationId"></param>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.StoryTemplateController.GetStoryTemplate(System.Guid,System.Guid)">
+            <summary>
+            Get story template for organization
+            </summary>
+            <param name="organizationId"></param>
+            <param name="storyTemplateId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.StoryTemplateController.Delete(System.Guid,System.Guid)">
+            <summary>
+            deletes a story template for an organization
+            </summary>
+            <param name="organizationId"></param>
+            <param name="storyTemplateId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.StoryTemplateController.ConvertStoryToTemplate(System.Guid,System.Guid,AgencyPro.Core.StoryTemplates.ViewModels.ConvertStoryInput)">
+            <summary>
+            Converts story to a template
+            </summary>
+            <param name="organizationId"></param>
+            <param name="storyId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.StoryTemplateController.Create(System.Guid,System.Guid,AgencyPro.Core.StoryTemplates.ViewModels.StoryTemplateInput)">
+            <summary>
+            create a new story template
+            </summary>
+            <param name="organizationId"></param>
+            <param name="storyId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.StoryTemplateController.UpdateTemplate(System.Guid,System.Guid,AgencyPro.Core.StoryTemplates.ViewModels.StoryTemplateInput)">
+            <summary>
+            update story template
+            </summary>
+            <param name="organizationId"></param>
+            <param name="templateId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.TimeController.GetProvidingAgencyMatrix(System.Guid,AgencyPro.Core.TimeEntries.ViewModels.TimeMatrixFilters)">
+            <summary>
+                Gets a searchable matrix of time segments
+            </summary>
+            <param name="organizationId"></param>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.TimeController.GetRecruitingAgencyMatrix(System.Guid,AgencyPro.Core.TimeEntries.ViewModels.TimeMatrixFilters)">
+            <summary>
+            Gets a searchable matrix of time segments for the recruiting agency
+            </summary>
+            <param name="organizationId"></param>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.TimeController.GetMarketingAgencyMatrix(System.Guid,AgencyPro.Core.TimeEntries.ViewModels.TimeMatrixFilters)">
+            <summary>
+            Gets searchable matrix of time segments for the marketing agency
+            </summary>
+            <param name="organizationId"></param>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.TimeController.GetEntries(System.Guid,AgencyPro.Core.TimeEntries.ViewModels.TimeMatrixFilters)">
+            <summary>
+                Gets time entries for an agency
+            </summary>
+            <param name="organizationId">the organization id</param>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.TimeController.GetEntry(System.Guid,System.Guid)">
+            <summary>
+            get entry details
+            </summary>
+            <param name="organizationId"></param>
+            <param name="entryId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.TimeController.GetCharts(System.Guid,AgencyPro.Core.TimeEntries.ViewModels.TimeMatrixFilters,AgencyPro.Core.Chart.ChartParams)">
+            <summary>
+            gets the provider charts
+            </summary>
+            <param name="organizationId"></param>
+            <param name="filters"></param>
+            <param name="chartParams"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.TimeController.GetRecruitingCharts(System.Guid,AgencyPro.Core.TimeEntries.ViewModels.TimeMatrixFilters,AgencyPro.Core.Chart.ChartParams)">
+            <summary>
+            Gets the recruiting charts
+            </summary>
+            <param name="organizationId"></param>
+            <param name="filters"></param>
+            <param name="chartParams"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.TimeController.GetMarketingCharts(System.Guid,AgencyPro.Core.TimeEntries.ViewModels.TimeMatrixFilters,AgencyPro.Core.Chart.ChartParams)">
+            <summary>
+            Get the marketing charts
+            </summary>
+            <param name="organizationId"></param>
+            <param name="filters"></param>
+            <param name="chartParams"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.TimeController.DeleteEntry(System.Guid,System.Guid)">
+            <summary>
+            delete a time entry
+            </summary>
+            <param name="organizationId"></param>
+            <param name="entryId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.TimeController.Approve(System.Guid,System.Guid[])">
+            <summary>
+                Approves Time Segment
+            </summary>
+            <param name="organizationId"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.TimeController.SaveAndApprove(System.Guid,System.Guid,AgencyPro.Core.TimeEntries.ViewModels.TimeEntryInput)">
+            <summary>
+                Approves Time Entry and updates at teh same time
+            </summary>
+            <param name="organizationId"></param>
+            <param name="entryId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.TimeController.Reject(System.Guid,System.Guid[])">
+            <summary>
+                Rejects Time Entry(ies)
+            </summary>
+            <param name="organizationId"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.WidgetController.AgencyStreamWidget(System.Guid,AgencyPro.Core.TimeEntries.ViewModels.TimeMatrixFilters)">
+            <summary>
+                Agency Owner Dashboard
+            </summary>
+            <param name="organizationId"></param>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.WorkOrderController.GetWorkOrders(System.Guid,AgencyPro.Core.Orders.WorkOrderFilters)">
+            <summary>
+             get's all work orders submitted by customer
+            </summary>
+            <param name="organizationId"></param>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.WorkOrderController.UpdateWorkOrder(System.Guid,System.Guid,AgencyPro.Core.Orders.ViewModels.UpdateWorkOrderInput)">
+            <summary>
+            Update work order
+            </summary>
+            <param name="organizationId"></param>
+            <param name="workOrderId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.WorkOrderController.GetWorkOrders(System.Guid,System.Guid)">
+            <summary>
+            Gets work order by id
+            </summary>
+            <param name="organizationId"></param>
+            <param name="workOrderId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.WorkOrderController.AcceptWorkOrder(System.Guid,System.Guid,AgencyPro.Core.Orders.ViewModels.WorkOrderAcceptInput)">
+            <summary>
+            accept the work order
+            </summary>
+            <param name="organizationId"></param>
+            <param name="workOrderId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.WorkOrderController.RejectWorkOrder(System.Guid,System.Guid)">
+            <summary>
+            reject the work order
+            </summary>
+            <param name="organizationId"></param>
+            <param name="workOrderId"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

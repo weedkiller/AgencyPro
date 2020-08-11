@@ -1,0 +1,103 @@
+$input-height: 54;
+
+.form {
+  position: relative;
+
+  .control {
+    position: relative;
+
+    .input {
+      border-radius: 0;
+      &.is-invalid {
+        border-style: dashed;
+      }
+    }
+
+    .label {
+      position: absolute;
+      top: ($input-height / 4 * 1px);
+      pointer-events: none;
+      z-index: 1;
+      font-size: 0.938em;
+      padding-left: calc(0.667em - 1px);
+      padding-right: calc(0.667em - 1px);
+      font-weight: normal;
+      transition: all 0.3s ease;
+      color: #ffffff;
+    }
+
+    select,
+    input,
+    textarea {
+      transition: all 0.3s ease;
+    }
+
+    input {
+      height: pxToEm($input-height);
+      background-color: transparent;
+      padding-top: 1.5em;
+      color: #ffffff;
+    }
+
+    textarea {
+      resize: none;
+      background-color: transparent;
+      padding-top: 1.5em;
+      color: #ffffff;
+      border-radius: 0;
+      border-color: $input-border-color;
+    }
+
+    select {
+      background: none;
+      border-color: $input-border-color;
+      width: 100%;
+      padding: 0.625em;
+      color: #ffffff;
+    }
+
+    input:focus,
+    input:valid,
+    input.form-file,
+    input.has-value,
+    textarea:focus,
+    textarea:valid,
+    textarea.form-file,
+    textarea.has-value {
+      border: 1px solid #ffffff;
+      ~ .label {
+        font-size: pxToEm(11);
+        color: #ffffff;
+        padding-left: calc(1em - 1px);
+        padding-right: calc(1em - 1px);
+        top: 5px;
+        left: 0;
+        opacity: 0.9;
+      }
+    }
+  }
+
+  .file-name {
+    color: #ffffff;
+  }
+
+  .file-input {
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    outline: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  .button {
+    border-radius: 0;
+  }
+}
+
+.invalid-feedback {
+  font-size: pxToEm(13);
+  color: #fff;
+  margin-top: 4px;
+}

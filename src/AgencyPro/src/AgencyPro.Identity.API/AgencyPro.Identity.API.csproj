@@ -1,0 +1,147 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <TypeScriptToolsVersion>3.1</TypeScriptToolsVersion>
+    <PreserveCompilationContext>true</PreserveCompilationContext>
+
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>Docs.API.xml</DocumentationFile>
+    <NoWarn>1701;1702;1591</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Data\**" />
+    <Compile Remove="Services\**" />
+    <Compile Remove="ViewModels\**" />
+    <Compile Remove="wwwroot\environments\**" />
+    <Content Remove="Data\**" />
+    <Content Remove="Services\**" />
+    <Content Remove="ViewModels\**" />
+    <Content Remove="wwwroot\environments\**" />
+    <EmbeddedResource Remove="Data\**" />
+    <EmbeddedResource Remove="Services\**" />
+    <EmbeddedResource Remove="ViewModels\**" />
+    <EmbeddedResource Remove="wwwroot\environments\**" />
+    <None Remove="Data\**" />
+    <None Remove="Services\**" />
+    <None Remove="ViewModels\**" />
+    <None Remove="wwwroot\environments\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="compilerconfig.json" />
+    <Content Remove="wwwroot\app\ideafortune.js" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="IdentityServer4.AspNetIdentity" Version="2.4.0" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.4" />
+    <PackageReference Include="Microsoft.Azure.KeyVault" Version="3.0.3" />
+    <PackageReference Include="Microsoft.IdentityModel.Clients.ActiveDirectory" Version="5.0.5" />
+
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="compilerconfig.json" />
+    <None Include="wwwroot\app\ideafortune.js" />
+    <None Include="wwwroot\assets\icons\meteocons\demo-files\demo.css" />
+    <None Include="wwwroot\assets\icons\meteocons\demo-files\demo.js" />
+    <None Include="wwwroot\assets\icons\meteocons\demo.html" />
+    <None Include="wwwroot\assets\icons\meteocons\fonts\meteocons.svg" />
+    <None Include="wwwroot\assets\icons\meteocons\fonts\meteocons.ttf" />
+    <None Include="wwwroot\assets\icons\meteocons\fonts\meteocons.woff" />
+    <None Include="wwwroot\assets\icons\meteocons\Read Me.txt" />
+    <None Include="wwwroot\assets\icons\meteocons\style.css" />
+    <None Include="wwwroot\assets\idea_fortune.png" />
+    <None Include="wwwroot\assets\images\avatars\profile.jpg" />
+    <None Include="wwwroot\assets\images\backgrounds\dark-material-bg.jpg" />
+    <None Include="wwwroot\assets\images\backgrounds\header-bg.png" />
+    <None Include="wwwroot\assets\images\beach.jpg" />
+    <None Include="wwwroot\assets\images\flags\es.png" />
+    <None Include="wwwroot\assets\images\flags\tr.png" />
+    <None Include="wwwroot\assets\images\flags\us.png" />
+    <None Include="wwwroot\assets\images\logos\android.png" />
+    <None Include="wwwroot\assets\images\logos\angular-material.png" />
+    <None Include="wwwroot\assets\images\logos\angular.png" />
+    <None Include="wwwroot\assets\images\logos\browsersync.png" />
+    <None Include="wwwroot\assets\images\logos\fallout.png" />
+    <None Include="wwwroot\assets\images\logos\fuse.svg" />
+    <None Include="wwwroot\assets\images\logos\google.png" />
+    <None Include="wwwroot\assets\images\logos\gulp.png" />
+    <None Include="wwwroot\assets\images\logos\idea-fortune.svg" />
+    <None Include="wwwroot\assets\images\logos\IF-black-bg.svg" />
+    <None Include="wwwroot\images\account-management.svg" />
+    <None Include="wwwroot\images\calendar.svg" />
+    <None Include="wwwroot\images\contracting.svg" />
+    <None Include="wwwroot\images\diagonal-lines-1.svg" />
+    <None Include="wwwroot\images\diagonal-lines-2.svg" />
+    <None Include="wwwroot\images\favicons\safari-pinned-tab.svg" />
+    <None Include="wwwroot\images\favicons\site.webmanifest" />
+    <None Include="wwwroot\images\icon-event.svg" />
+    <None Include="wwwroot\images\icon-facebook.svg" />
+    <None Include="wwwroot\images\icon-instagram.svg" />
+    <None Include="wwwroot\images\icon-linkedin.svg" />
+    <None Include="wwwroot\images\icon-twitter.svg" />
+    <None Include="wwwroot\images\icon-video.svg" />
+    <None Include="wwwroot\images\if-logo-dots.svg" />
+    <None Include="wwwroot\images\logo-black.svg" />
+    <None Include="wwwroot\images\logo-white.svg" />
+    <None Include="wwwroot\images\logo_if_purple.svg" />
+    <None Include="wwwroot\images\marketing.svg" />
+    <None Include="wwwroot\images\project-management.svg" />
+    <None Include="wwwroot\images\recruiting.svg" />
+    <None Include="wwwroot\js\app.js" />
+    <None Include="wwwroot\js\plugins\jquery.fancybox.js" />
+    <None Include="wwwroot\js\plugins\owl.carousel.min.js" />
+    <None Include="wwwroot\js\plugins\owl.carousel.thumb.min.js" />
+    <None Include="wwwroot\js\signin-redirect.js" />
+    <None Include="wwwroot\js\signout-redirect.js" />
+    <None Include="wwwroot\js\site.js" />
+    <None Include="wwwroot\js\vendors\jquery.min.js" />
+    <None Include="wwwroot\styles\components3\_components.scss" />
+    <None Include="wwwroot\styles\components3\_header.scss" />
+    <None Include="wwwroot\styles\components\_blog.scss" />
+    <None Include="wwwroot\styles\components\_components.scss" />
+    <None Include="wwwroot\styles\components\_features.scss" />
+    <None Include="wwwroot\styles\components\_footer.scss" />
+    <None Include="wwwroot\styles\components\_form.scss" />
+    <None Include="wwwroot\styles\components\_get-started.scss" />
+    <None Include="wwwroot\styles\components\_global.scss" />
+    <None Include="wwwroot\styles\components\_header.scss" />
+    <None Include="wwwroot\styles\components\_hero.scss" />
+    <None Include="wwwroot\styles\components\_inner-pages.scss" />
+    <None Include="wwwroot\styles\components\_inquiry.scss" />
+    <None Include="wwwroot\styles\components\_investors-intro.scss" />
+    <None Include="wwwroot\styles\components\_layout.scss" />
+    <None Include="wwwroot\styles\components\_misc.scss" />
+    <None Include="wwwroot\styles\components\_svg_icons.scss" />
+    <None Include="wwwroot\styles\components\_terms_privacy.scss" />
+    <None Include="wwwroot\styles\components\_video.scss" />
+    <None Include="wwwroot\styles\components\_who-we-are.scss" />
+    <None Include="wwwroot\styles\partials\_funcs.scss" />
+    <None Include="wwwroot\styles\partials\_mixins.scss" />
+    <None Include="wwwroot\styles\partials\_variables.scss" />
+    <None Include="wwwroot\styles\plugins\_animate.scss" />
+    <None Include="wwwroot\styles\plugins\_bulma.scss" />
+    <None Include="wwwroot\styles\plugins\_jquery.fancybox.scss" />
+    <None Include="wwwroot\styles\plugins\_jquery.pagepiling.scss" />
+    <None Include="wwwroot\styles\plugins\_owlcarousel.scss" />
+    <None Include="wwwroot\styles\styles.css.map" />
+    <None Include="wwwroot\styles\styles.scss" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AgencyPro.Middleware\AgencyPro.Middleware.csproj" />
+  </ItemGroup>
+
+</Project>

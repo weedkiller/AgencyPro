@@ -1,0 +1,13 @@
+﻿@using IdeaFortune.Mailer
+@using IdeaFortune.Mailer.TagHelpers
+@model IdeaFortune.Core.TimeEntries.Emails.AccountManagerTimeEntryEmail
+@{
+    Layout = null;
+}
+
+<div>
+    @Model.Introduction()
+    @Model.TimeEntryApproved(Model)
+    @Model.Footer(SectionType.AccountManager, Model.ContractorOrganizationName)
+
+</div>

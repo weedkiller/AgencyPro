@@ -1,0 +1,22 @@
+﻿
+@model AgencyPro.Identity.API.Controllers.Account.ConfirmEmailViewModel
+
+<main class="two-cols-membership">
+    <div class="left-col fullbg-matte"></div>
+    <div class="right-col is-flex is-v-centered">
+        <div class="box has-gap-left has-gap-right is-borderless is-shadowless">
+            <div class="page-heading">
+                <partial name="_ValidationSummary" />
+            </div>
+
+            @if (ViewContext.ModelState.IsValid == true)
+            {
+                <div>
+                    Email Confirmed Successfuly
+                </div>
+            }
+        </div>
+    </div>
+</main>
+
+

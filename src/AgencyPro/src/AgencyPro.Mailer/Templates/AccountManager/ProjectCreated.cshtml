@@ -1,0 +1,13 @@
+﻿@using IdeaFortune.Mailer
+@using IdeaFortune.Mailer.TagHelpers
+@model IdeaFortune.Core.Projects.Emails.AccountManagerProjectEmail
+@{
+    Layout = null;
+}
+
+<div>
+    @Model.Introduction()
+    @Model.ProjectCreated(Model)
+    @Model.Footer(SectionType.AccountManager, Model.AccountManagerOrganizationName)
+
+</div>

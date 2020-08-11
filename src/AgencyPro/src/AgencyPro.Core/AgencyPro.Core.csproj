@@ -1,0 +1,182 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <LangVersion>7.3</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Candidates\Filters\**" />
+    <Compile Remove="Candidates\Projections\**" />
+    <Compile Remove="Candidates\Validation\**" />
+    <Compile Remove="Categories\Enums\**" />
+    <Compile Remove="Categories\Filters\**" />
+    <Compile Remove="Categories\Validation\**" />
+    <Compile Remove="Contracts\Validation\**" />
+    <Compile Remove="CustomerAccounts\Projections\**" />
+    <Compile Remove="CustomerAccounts\Validation\**" />
+    <Compile Remove="EmailSending\Enums\**" />
+    <Compile Remove="EmailSending\Filters\**" />
+    <Compile Remove="EmailSending\Models\**" />
+    <Compile Remove="EmailSending\Validation\**" />
+    <Compile Remove="Filters\**" />
+    <Compile Remove="Gateways\Services\**" />
+    <Compile Remove="Invoices\Validation\**" />
+    <Compile Remove="Leads\Helpers\**" />
+    <Compile Remove="Leads\Projections\**" />
+    <Compile Remove="Leads\Validation\**" />
+    <Compile Remove="OrganizationSkills\**" />
+    <Compile Remove="Organizations\Enums\**" />
+    <Compile Remove="Organizations\Filters\**" />
+    <Compile Remove="Organizations\Validation\**" />
+    <Compile Remove="People\Projections\**" />
+    <Compile Remove="People\Validation\**" />
+    <Compile Remove="Projects\Projections\**" />
+    <Compile Remove="Projects\Validation\**" />
+    <Compile Remove="Proposals\Exceptions\**" />
+    <Compile Remove="Proposals\Validation\**" />
+    <Compile Remove="Skills\Events\**" />
+    <Compile Remove="Skills\Extensions\**" />
+    <Compile Remove="Skills\Filters\**" />
+    <Compile Remove="Skills\Validation\**" />
+    <Compile Remove="Storage\**" />
+    <Compile Remove="Stories\Projections\**" />
+    <Compile Remove="Stories\Validation\**" />
+    <Compile Remove="Subscriptions\Models\**" />
+    <Compile Remove="TimeEntries\Projections\**" />
+    <Compile Remove="TimeEntries\Validation\**" />
+    <Compile Remove="Transactions\Services\**" />
+    <Compile Remove="Transactions\ViewModels\**" />
+    <EmbeddedResource Remove="Candidates\Filters\**" />
+    <EmbeddedResource Remove="Candidates\Projections\**" />
+    <EmbeddedResource Remove="Candidates\Validation\**" />
+    <EmbeddedResource Remove="Categories\Enums\**" />
+    <EmbeddedResource Remove="Categories\Filters\**" />
+    <EmbeddedResource Remove="Categories\Validation\**" />
+    <EmbeddedResource Remove="Contracts\Validation\**" />
+    <EmbeddedResource Remove="CustomerAccounts\Projections\**" />
+    <EmbeddedResource Remove="CustomerAccounts\Validation\**" />
+    <EmbeddedResource Remove="EmailSending\Enums\**" />
+    <EmbeddedResource Remove="EmailSending\Filters\**" />
+    <EmbeddedResource Remove="EmailSending\Models\**" />
+    <EmbeddedResource Remove="EmailSending\Validation\**" />
+    <EmbeddedResource Remove="Filters\**" />
+    <EmbeddedResource Remove="Gateways\Services\**" />
+    <EmbeddedResource Remove="Invoices\Validation\**" />
+    <EmbeddedResource Remove="Leads\Helpers\**" />
+    <EmbeddedResource Remove="Leads\Projections\**" />
+    <EmbeddedResource Remove="Leads\Validation\**" />
+    <EmbeddedResource Remove="OrganizationSkills\**" />
+    <EmbeddedResource Remove="Organizations\Enums\**" />
+    <EmbeddedResource Remove="Organizations\Filters\**" />
+    <EmbeddedResource Remove="Organizations\Validation\**" />
+    <EmbeddedResource Remove="People\Projections\**" />
+    <EmbeddedResource Remove="People\Validation\**" />
+    <EmbeddedResource Remove="Projects\Projections\**" />
+    <EmbeddedResource Remove="Projects\Validation\**" />
+    <EmbeddedResource Remove="Proposals\Exceptions\**" />
+    <EmbeddedResource Remove="Proposals\Validation\**" />
+    <EmbeddedResource Remove="Skills\Events\**" />
+    <EmbeddedResource Remove="Skills\Extensions\**" />
+    <EmbeddedResource Remove="Skills\Filters\**" />
+    <EmbeddedResource Remove="Skills\Validation\**" />
+    <EmbeddedResource Remove="Storage\**" />
+    <EmbeddedResource Remove="Stories\Projections\**" />
+    <EmbeddedResource Remove="Stories\Validation\**" />
+    <EmbeddedResource Remove="Subscriptions\Models\**" />
+    <EmbeddedResource Remove="TimeEntries\Projections\**" />
+    <EmbeddedResource Remove="TimeEntries\Validation\**" />
+    <EmbeddedResource Remove="Transactions\Services\**" />
+    <EmbeddedResource Remove="Transactions\ViewModels\**" />
+    <None Remove="Candidates\Filters\**" />
+    <None Remove="Candidates\Projections\**" />
+    <None Remove="Candidates\Validation\**" />
+    <None Remove="Categories\Enums\**" />
+    <None Remove="Categories\Filters\**" />
+    <None Remove="Categories\Validation\**" />
+    <None Remove="Contracts\Validation\**" />
+    <None Remove="CustomerAccounts\Projections\**" />
+    <None Remove="CustomerAccounts\Validation\**" />
+    <None Remove="EmailSending\Enums\**" />
+    <None Remove="EmailSending\Filters\**" />
+    <None Remove="EmailSending\Models\**" />
+    <None Remove="EmailSending\Validation\**" />
+    <None Remove="Filters\**" />
+    <None Remove="Gateways\Services\**" />
+    <None Remove="Invoices\Validation\**" />
+    <None Remove="Leads\Helpers\**" />
+    <None Remove="Leads\Projections\**" />
+    <None Remove="Leads\Validation\**" />
+    <None Remove="OrganizationSkills\**" />
+    <None Remove="Organizations\Enums\**" />
+    <None Remove="Organizations\Filters\**" />
+    <None Remove="Organizations\Validation\**" />
+    <None Remove="People\Projections\**" />
+    <None Remove="People\Validation\**" />
+    <None Remove="Projects\Projections\**" />
+    <None Remove="Projects\Validation\**" />
+    <None Remove="Proposals\Exceptions\**" />
+    <None Remove="Proposals\Validation\**" />
+    <None Remove="Skills\Events\**" />
+    <None Remove="Skills\Extensions\**" />
+    <None Remove="Skills\Filters\**" />
+    <None Remove="Skills\Validation\**" />
+    <None Remove="Storage\**" />
+    <None Remove="Stories\Projections\**" />
+    <None Remove="Stories\Validation\**" />
+    <None Remove="Subscriptions\Models\**" />
+    <None Remove="TimeEntries\Projections\**" />
+    <None Remove="TimeEntries\Validation\**" />
+    <None Remove="Transactions\Services\**" />
+    <None Remove="Transactions\ViewModels\**" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="8.1.1" />
+    <PackageReference Include="IdentityModel" Version="3.10.10" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+    <PackageReference Include="Microsoft.Extensions.PlatformAbstractions" Version="1.1.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+    <PackageReference Include="Serilog" Version="2.9.0" />
+    <PackageReference Include="stripe.net" Version="34.5.0" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="4.5.0" />
+    <PackageReference Include="System.ComponentModel.Primitives" Version="4.3.0" />
+    <PackageReference Include="System.Reflection.TypeExtensions" Version="4.5.1" />
+    <PackageReference Include="System.Runtime.Serialization.Primitives" Version="4.3.0" />
+    <PackageReference Include="System.Security.Claims" Version="4.3.0" />
+    <PackageReference Include="valueinjecter" Version="3.1.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.Extensions" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ActivityFeed\Models\" />
+    <Folder Include="Commission\Events\" />
+    <Folder Include="EmailSending\ViewModels\" />
+    <Folder Include="FinancialInfo\Extensions\" />
+    <Folder Include="Infrastructure\Caching\Enums\" />
+    <Folder Include="Infrastructure\Caching\Filters\" />
+    <Folder Include="Infrastructure\Caching\Models\" />
+    <Folder Include="Infrastructure\Caching\Validation\" />
+    <Folder Include="Infrastructure\Caching\ViewModels\" />
+    <Folder Include="BalanceTransactions\" />
+    <Folder Include="OrganizationRoles\Projections\" />
+    <Folder Include="Organizations\BuyerOrganizations\" />
+    <Folder Include="Organizations\ProviderOrganizations\Models\" />
+    <Folder Include="PaymentIntents\Events\" />
+    <Folder Include="Products\ViewModels\" />
+    <Folder Include="Retainers\Events\" />
+    <Folder Include="StoryTemplates\Extensions\" />
+    <Folder Include="StripeSources\Events\" />
+    <Folder Include="StripeSources\Models\" />
+    <Folder Include="Transfers\Events\" />
+    <Folder Include="Charges\Events\" />
+  </ItemGroup>
+
+
+</Project>

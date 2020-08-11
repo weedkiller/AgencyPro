@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900");
+
+@import "partials/variables";
+@import "partials/funcs";
+@import "partials/mixins";
+
+@import "plugins/bulma";
+@import "plugins/animate";
+ 
+@import 'components/layout';
+
+
+body.lp-full {
+    overflow: unset;
+    width: 100%; 
+    
+    background: url('../images/lp_bg.svg') repeat-x 0 100%;
+
+    @include mq-min (801px) {
+      display: flex;
+      align-items: center;
+      height: 100vh; 
+    }
+
+}
+
+ 
+
+img {
+    display: block; 
+}
+
+
+.lp-promo {
+  * {
+    transition: .5s all ease-in;
+  }
+    width: 100%; 
+    max-width: 1600px; 
+    margin:0 auto;
+    min-height: unset;
+    box-sizing: border-box;
+    text-align: left; 
+    padding: 2rem 2rem 2rem 4rem; 
+    
+    @include mq-max (1280px) {
+      padding-left: 2rem; 
+    }
+    
+    @include mq-max (1280px) {
+      padding: 1.5rem; 
+    }
+    
+
+    .lp-header {
+        text-align: left; 
+        margin-bottom: 100px; 
+
+        @include mq-max (1280px) {
+          margin-bottom: 70px; 
+        }
+
+
+        @include mq-max (800px) {
+          
+          text-align: center;
+          img {
+            height: 60px; width: auto;
+            margin: 0 auto;
+          }
+        }
+        
+    }
+
+    .lp-content {
+        margin-bottom: 150px; 
+
+        @include mq-max (1280px) {
+          margin-bottom: 50px; 
+        }
+
+        @include mq-max (1024px) {
+          margin-bottom: 0; 
+        }
+
+        @include mq-max (800px) {
+          text-align: center;
+        }
+        h1 {
+            font-size: 41px; 
+            font-weight: 400; 
+            line-height: 1.25;
+
+            @include mq-max (1280px) {
+              font-size: 32px; 
+            }
+
+            @include mq-max (1024px) {
+              font-size: 24px; 
+            }
+
+            @include mq-max (480px) {
+              font-size: 22px; 
+            }
+        }
+
+        h2 {
+            font-size: 68px; 
+            font-weight: 500; 
+            line-height: 1.25;
+            @include mq-max (1280px) {
+              font-size: 56px; 
+            }
+
+            @include mq-max (1024px) {
+              font-size: 50px; 
+            }
+
+            @include mq-max (480px) {
+              font-size:  46px; 
+              line-height: 1;
+              margin-top: 10px; 
+            }
+        }
+
+
+    }
+
+    .lp-intro {
+      position: relative;
+      z-index: 2; 
+    }
+
+
+    .lp-graphic {
+      position: absolute;
+      top: 0; 
+      width: 100%; 
+      height: 100vh; 
+      z-index: 1; 
+      text-align: right;
+      right: 0; 
+      display: flex; 
+      align-items: center;
+      justify-content: flex-end;
+      img {
+        display: inline-block; 
+        width: 60%; height: auto; 
+
+        @include mq-max (1280px) {
+          width: 55%; 
+        }
+
+        @include mq-max (800px) {
+          width: 100%; 
+          margin-top: 50px; 
+
+        }
+      }
+
+      @include mq-max (800px) {
+        position: relative;
+        height: auto;
+        img { 
+          display: block;
+        }
+      }
+    }
+
+    .lp-cta {
+        max-width: 380px; 
+        margin-top: 50px; 
+
+        @include mq-max (1024px) {
+          margin-top: 30px; 
+          max-width: 300px;
+        }
+
+        @include mq-max (800px) {
+          display: flex; 
+          max-width: none;
+          margin-left: -15px; 
+          justify-content: center;
+        }
+
+        @include mq-max (640px) {
+          display: inline-block;
+          margin-left: 0; 
+        }
+    }
+
+
+    .lp-cta-holder {
+        margin-top: 15px; 
+        @include mq-max (800px) {
+          margin-left: 15px;  
+        }
+
+        @include mq-max (640px) {
+          display: block;
+          margin-left: 0; 
+        }
+    }
+    
+    .lp-cta-button { 
+        background-color: $red;
+        position: relative; 
+        padding-top: 1.5em;
+        padding-bottom: 1.5em; 
+      
+        display: block; 
+        border-radius: 8px; 
+        padding-left: 6em;
+        color: $white;  
+        text-align: left; 
+        transition: all .5s;
+        box-shadow: 2px 3px 9px rgba(0, 0, 0, 0.25);;
+
+        @include mq-max (1024px) {
+          padding-top: 1em;
+          padding-bottom: 1em;
+          padding-left: 4.5em; 
+        }
+
+        @include mq-max (800px) {
+          padding-right: 2em; 
+        }
+
+        &.lp-cta-button-dark { 
+            background-color: $black;
+            &:hover {
+            color: $white; 
+            background-color: #000; 
+            }
+        }
+
+        &:hover {
+          color: $white; 
+          background-color: $reddark; 
+        }
+
+        em {
+          img {
+            width: 44px; height: auto; 
+
+            @include mq-max (1024px) {
+              width: 32px; 
+            }
+
+          }
+          width: 44px + 26px; 
+          position: absolute; 
+          top: 50%; 
+          left: 30px; 
+          transform: translateY(-45%);
+
+          @include mq-max (1024px) {
+            width: 32px + 16px; 
+          }
+
+        }
+      
+        .btn-hero-main,
+        .btn-hero-sub { 
+          display: block; 
+        }
+      
+        &-txt {
+          font-size: 1.25em; 
+          line-height: 1.25em; 
+          @include mq-max (1024px) {
+            font-size: 1em;
+          }
+        } 
+      
+ 
+      }
+      
+
+}
+
+
+

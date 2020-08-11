@@ -1,0 +1,52 @@
+@import "../../node_modules/bulma/sass/utilities/initial-variables";
+@import "../../node_modules/bulma/sass/utilities/functions";
+
+$family-sans-serif: "Roboto", sans-serif;
+
+$radius-small: 4px;
+$radius: 6px;
+$radius-large: 8px;
+
+$primary: #000;
+$link: #333333;
+$info: #444;
+$success: #666; 
+$warning: #807a78;
+$danger: #c50000;
+$dark: $grey-darker;
+$text: $grey-dark;
+  
+
+$body-color: $black; 
+
+
+$navbar-background-color: #000;
+$navbar-height: 3.5rem;
+$navbar-item-img-max-height: 1.75rem;
+$navbar-item-color:$white-ter;
+$navbar-item-hover-color: $white; 
+$navbar-item-hover-background-color: transparent;
+$navbar-breakpoint: $desktop; 
+$button-border-width: 1px; 
+
+$button-padding-vertical: calc(0.75em - #{$button-border-width}) !default
+$button-padding-horizontal: 2em;
+
+ 
+$input-border-color: $grey-lighter;
+$input-shadow: none;
+$input-radius: 0px;
+$input-hover-border-color: $grey-lighter;
+
+$label-color: $grey;
+$label-weight: 400;
+
+$file-border-color: $grey-lighter;
+$file-radius: 0;
+$file-cta-background-color: transparent;
+$file-cta-color: $white;
+$file-cta-hover-color: $white;
+$file-cta-active-color: $white;
+ 
+// 6. Import the rest of Bulma
+@import "../../node_modules/bulma/bulma";

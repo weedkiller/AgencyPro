@@ -1,0 +1,21 @@
+﻿@model AgencyPro.Identity.API.Controllers.Account.LogoutViewModel
+
+
+<main class="two-cols-membership">
+    <div class="left-col fullbg-matte"></div>
+    <div class="right-col is-flex is-v-centered">
+
+        <div class="box is-fullwidth has-gap-left has-gap-right is-borderless is-shadowless">
+            <div class="page-heading">
+            </div>
+            <form asp-action="Logout">
+                <input type="hidden" name="logoutId" value="@Model.LogoutId" />
+               <div class="field">
+                    <button class="button is-primary is-fullwidth">
+                        Click here to Logout
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>

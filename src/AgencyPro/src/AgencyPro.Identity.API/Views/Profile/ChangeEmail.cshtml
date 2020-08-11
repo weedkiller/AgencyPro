@@ -1,0 +1,30 @@
+@model AgencyPro.Identity.API.Controllers.Profile.ChangeEmailViewModel
+    <main class="two-cols-nav">
+            <partial name="_SideNav" />
+        <div class="right-col is-flex">
+
+            <div class="box has-gap-left has-gap-right is-borderless is-shadowless">
+                <div class="page-heading">
+                    <h1 class="page-title">Change Email</h1>
+                </div>
+                <partial name="_ValidationSummary" />
+                <form method="post" enctype="multipart/form-data" asp-controller="Profile" asp-action="Email">
+                    <div class="field">
+                        <label asp-for="Email" class="label">Email</label>
+                        <div class="control has-icons-left">
+                            <input class="input validate" asp-for="Email" placeholder="Email" autofocus="" type="text"
+                                   data-val="true" data-val-required="The Email field is required." id="Email"
+                                   name="Email" value="">
+                            <span class="icon is-small is-left">
+                                <i class="fa fa-envelope"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <button class="button is-primary is-fullwidth" name="button" value="save">Save</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </main>

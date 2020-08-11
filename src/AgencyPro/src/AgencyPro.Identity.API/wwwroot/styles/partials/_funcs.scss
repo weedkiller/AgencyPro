@@ -1,0 +1,7 @@
+@function pxToEm($px, $parentPx: $defaultFontSize) {
+  @return ($px / $parentPx) * 1em;
+}
+
+@function stripUnits($number) {
+  @return $number / ($number * 0 + 1);
+}

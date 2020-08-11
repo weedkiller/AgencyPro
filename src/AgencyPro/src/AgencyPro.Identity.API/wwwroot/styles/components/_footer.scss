@@ -1,0 +1,24 @@
+.footer {
+  font-size: 0.875em; 
+  color: #efefef; 
+
+  .columns {
+    align-items: center; 
+  }
+
+  .footer-logo {
+    height: 30px; width: auto; 
+  }
+
+  .footer-social-networks {
+    @include mq-min ($tablet) {
+      text-align: right; 
+    }
+  }
+
+  a {
+    color: $white; 
+
+  }
+}
+

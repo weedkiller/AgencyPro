@@ -1,0 +1,13 @@
+﻿@using IdeaFortune.Mailer
+@using IdeaFortune.Mailer.TagHelpers
+@model IdeaFortune.Core.Orders.Emails.AgencyOwnerWorkOrderEmail
+@{
+    Layout = null;
+}
+
+<div>
+    @Model.Introduction()
+    @Model.WorkOrderApproved(Model)
+    @Model.Footer(SectionType.AgencyOwner, Model.AccountManagerOrganizationName)
+
+</div>

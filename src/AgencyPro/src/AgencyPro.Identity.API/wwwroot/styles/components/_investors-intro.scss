@@ -1,0 +1,118 @@
+
+
+
+.investors-intro {
+  background-color: rgba(255,255,255, 0.8);
+  position: relative; 
+  padding-top: pxToEm(200);
+  padding-bottom: pxToEm(200);
+  
+  &:before {
+    content: '';
+    display: block; 
+    position: absolute; 
+    top: 0; left: 0; right: 0; bottom:0; 
+    background: url('../images/bg2.jpg') no-repeat 0 0;
+    background-size: cover; 
+    opacity: 0.5;
+    z-index: -1; 
+  }
+
+  .content-wrapper {
+    h4, h5 {
+      position: relative; 
+      z-index: 2; 
+      
+    }
+
+    h4 {
+      font-size: pxToEm(50);
+      font-weight: 500; 
+      margin-bottom: pxToEm(30, 50);line-height: 1;
+      
+      @include mq-max ($mobile) {
+        font-size: pxToEm(40);
+      }
+    }
+
+    h5 {
+      font-size: pxToEm(22);
+      font-weight: 400; 
+      margin-bottom: pxToEm(30, 22);
+
+      @include mq-max ($mobile) {
+        font-size: pxToEm(18);
+      }
+    }
+  }
+
+  .investors-actions {
+    display: flex; 
+    > div {
+      display: flex; 
+      align-items: center; 
+
+      @include mq-max ($mobile) {
+        margin-bottom: 1.5em; 
+      }
+    }
+
+    @include mq-max ($mobile) {
+      flex-direction:column;
+    }
+    .intro-video {
+      display: flex; align-items: center; 
+      font-size: pxToEm(18);
+      margin-left: 2em; 
+      img {
+        width: 50px; height: auto;
+        opacity: 0.7; 
+        margin-right: .5em;  
+      }
+
+      @include mq-max ($mobile) {
+        margin-left: 1.25em; 
+      }
+    }
+  }
+}
+
+.investors-intro-outer {
+ 
+  position: relative;
+  .diagonal-lines-left, 
+  .diagonal-lines-right {
+    position: absolute; 
+    z-index: 0; 
+    transition: all .3s ease; 
+    @include mq-max ($tablet) {
+      height: 50px; 
+    }
+
+    @include mq-max ($mobile) {
+      height: 40px; 
+    }
+
+  }
+
+  .diagonal-lines-left {
+    top: -80px;
+    left: -100px;
+  }
+
+  .diagonal-lines-right {
+    bottom: -80px;
+    right: -100px;
+  }
+}
+
+.investors-intro-inner {
+  max-width: 700px; 
+  margin: 0 auto; position: relative;
+  @include mq-max ($tablet) {
+    margin-left: 1.5em;
+    margin-right: 1.5em; 
+  }
+ 
+}
+

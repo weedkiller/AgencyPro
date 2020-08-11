@@ -1,0 +1,38 @@
+﻿@model AgencyPro.Identity.API.Controllers.Account.LoggedOutViewModel
+
+@{
+    // set this so the layout rendering sees an anonymous user
+    ViewData["signed-out"] = true;
+}
+<main class="two-cols-membership">
+    <div class="left-col fullbg-matte"></div>
+    <div class="right-col is-flex is-v-centered">
+        <div class="box is-fullwidth has-gap-left has-gap-right is-borderless is-shadowless">
+            <div class="page-heading">
+                <h1 class="page-title">You are now logged out</h1>
+                <p class="text-thinner">
+                   
+                </p>
+                @if (Model.PostLogoutRedirectUri != null)
+                {
+                    <div>
+                        Click <a class="PostLogoutRedirectUri" href="@Model.PostLogoutRedirectUri">here</a> to return to the
+                        <span>@Model.ClientName</span> application.
+                    </div>
+                }
+
+                @if (Model.SignOutIframeUrl != null)
+                {
+                    <iframe width="0" height="0" class="signout" src="@Model.SignOutIframeUrl"></iframe>
+                }
+            </div>
+        </div>
+    </div>
+</main>
+@section scripts
+{
+    @if (Model.AutomaticRedirectAfterSignOut)
+    {
+        <script src="~/js/signout-redirect.js"></script>
+    }
+}

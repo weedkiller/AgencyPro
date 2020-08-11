@@ -1,0 +1,49 @@
+main {
+    min-height: calc(100vh - #{$navbar-height});
+}
+
+.two-cols-membership {
+    display: flex;
+    .left-col {
+        flex: 1; 
+         
+    }
+
+    .right-col {
+        width: pxToEm(600); 
+    }
+}
+
+.is-narrower {
+    @include mq-min ($desktop){
+        margin-left: 5%; 
+        margin-right: 5%; 
+    }
+}
+
+
+.is-v-centered {
+    align-items: center; 
+}
+
+.is-fullwidth { 
+    width: 100%; 
+}
+
+.text-thinner {
+    font-weight: 300; 
+}
+
+
+.has-gap-left {
+    margin-left: $gap;
+}
+
+.has-gap-right {
+    margin-right: $gap;
+}
+
+
+.field:not(:last-child) {
+    margin-bottom: 1.25em; 
+}

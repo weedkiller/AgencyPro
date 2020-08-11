@@ -1,0 +1,13 @@
+﻿@using IdeaFortune.Mailer
+@using IdeaFortune.Mailer.TagHelpers
+@model IdeaFortune.Core.Stories.Emails.ContractorStoryEmail
+@{
+    Layout = null;
+}
+
+<div>
+ @Model.Introduction()
+ @Model.StoryCompleted(Model)
+ @Model.Footer(SectionType.Contractor, Model.ProjectManagerOrganizationName)
+
+</div>

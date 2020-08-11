@@ -1,0 +1,14 @@
+﻿@using IdeaFortune.Mailer
+@using IdeaFortune.Mailer.TagHelpers
+@model IdeaFortune.Core.Candidates.Emails.AgencyOwnerCandidateEmail
+@{
+    Layout = null;
+}
+
+<div>
+    @Model.Introduction()
+    @Model.CandidateRejected(Model)
+    @Model.Footer(SectionType.AgencyOwner, Model.ProviderOrganizationName)
+
+</div>
+

@@ -1,0 +1,12 @@
+﻿@using IdeaFortune.Mailer
+@using IdeaFortune.Mailer.TagHelpers
+@model IdeaFortune.Core.Leads.Emails.MarketerLeadEmail
+
+<div>
+    @Model.Introduction()
+
+    @Model.LeadCreated(Model)
+
+    @Model.Footer(SectionType.Marketer, Model.MarketerOrganizationName)
+
+</div>

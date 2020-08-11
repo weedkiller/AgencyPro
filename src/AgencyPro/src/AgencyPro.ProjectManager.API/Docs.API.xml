@@ -1,0 +1,326 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AgencyPro.ProjectManager.API</name>
+    </assembly>
+    <members>
+        <member name="M:AgencyPro.ProjectManager.API.Controllers.v2.AccountManagerController.GetAccountManagerList(System.Guid,AgencyPro.Core.OrganizationPeople.Filters.AccountManagerFilters)">
+            <summary>
+               Get account managers within an organization
+            </summary>
+            <param name="organizationId"></param>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.ProjectManager.API.Controllers.v2.CandidateController.UpdateCandidate(System.Guid,System.Guid,AgencyPro.Core.Candidates.ViewModels.CandidateInput)">
+            <summary>
+                updates a candidate
+            </summary>
+            <param name="organizationId"></param>
+            <param name="candidateId"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.ProjectManager.API.Controllers.v2.CandidateController.RejectCandidate(System.Guid,System.Guid,AgencyPro.Core.Candidates.ViewModels.CandidateRejectionInput)">
+            <summary>
+                Mark a candidate as rejected by project manager
+            </summary>
+            <param name="organizationId"></param>
+            <param name="candidateId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.ProjectManager.API.Controllers.v2.CandidateController.GetCandidate(System.Guid,System.Guid)">
+            <summary>
+                get candidate
+            </summary>
+            <param name="organizationId">the org id</param>
+            <param name="candidateId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.ProjectManager.API.Controllers.v2.CandidateController.AcceptCandidate(System.Guid,System.Guid,AgencyPro.Core.Candidates.ViewModels.CandidateAcceptInput)">
+            <summary>
+                Hires the candidate
+            </summary>
+            <param name="organizationId"></param>
+            <param name="candidateId"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.ProjectManager.API.Controllers.v2.CandidateController.GetCandidates(System.Guid,AgencyPro.Core.Common.CommonFilters)">
+            <summary>
+                Gets candidates for a recruiter
+            </summary>
+            <param name="organizationId"></param>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.ProjectManager.API.Controllers.v2.CandidateController.DeleteCandidate(System.Guid,System.Guid)">
+            <summary>
+                deletes a candidate
+            </summary>
+            <param name="organizationId"></param>
+            <param name="candidateId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.ProjectManager.API.Controllers.v2.CandidateController.AddComment(System.Guid,System.Guid,AgencyPro.Core.Comments.ViewModels.CommentInput)">
+            <summary>
+            Add comment to a candidate
+            </summary>
+            <param name="organizationId"></param>
+            <param name="candidateId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.ProjectManager.API.Controllers.v2.ContractController.GetContracts(System.Guid,AgencyPro.Core.Contracts.Filters.ContractFilters)">
+            <summary>
+                Project Manager can get their contracts
+            </summary>
+            <param name="organizationId">the organization id</param>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.ProjectManager.API.Controllers.v2.ContractController.GetContract(System.Guid,System.Guid)">
+            <summary>
+                Get contract
+            </summary>
+            <param name="organizationId">the organization id</param>
+            <param name="contractId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.ProjectManager.API.Controllers.v2.ContractController.AddComment(System.Guid,System.Guid,AgencyPro.Core.Comments.ViewModels.CommentInput)">
+            <summary>
+            Add comment to a contract
+            </summary>
+            <param name="organizationId"></param>
+            <param name="contractId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.ProjectManager.API.Controllers.v2.ContractorController.GetContractors(System.Guid,AgencyPro.Core.OrganizationPeople.Filters.ContractorFilters)">
+            <summary>
+                Get all contractors that belong to an organization
+            </summary>
+            <param name="organizationId">The Organization ID</param>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.ProjectManager.API.Controllers.v2.CustomerController.GetCustomerList(System.Guid)">
+            <summary>
+            Get list of customers
+            </summary>
+            <param name="organizationId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.ProjectManager.API.Controllers.v2.ProjectController.Get(System.Guid,AgencyPro.Core.Projects.Filters.ProjectFilters)">
+            <summary>
+                gets all projects for the currently logged in project manager
+            </summary>
+            <param name="organizationId">the organization id</param>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.ProjectManager.API.Controllers.v2.ProjectController.GetProject(System.Guid,System.Guid)">
+            <summary>
+                Project manager get project
+            </summary>
+            <param name="organizationId"></param>
+            <param name="projectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.ProjectManager.API.Controllers.v2.ProjectController.UpdateProject(System.Guid,System.Guid,AgencyPro.Core.Projects.ViewModels.UpdateProjectInput)">
+            <summary>
+                Updates a project details
+            </summary>
+            <param name="organizationId"></param>
+            <param name="projectId"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.ProjectManager.API.Controllers.v2.ProjectController.AddComment(System.Guid,System.Guid,AgencyPro.Core.Comments.ViewModels.CommentInput)">
+            <summary>
+            Add comment to a project
+            </summary>
+            <param name="organizationId"></param>
+            <param name="projectId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.ProjectManager.API.Controllers.v2.StoryController.UpdateStory(System.Guid,System.Guid,AgencyPro.Core.Stories.ViewModels.UpdateStoryInput)">
+            <summary>
+                Updates a story
+            </summary>
+            <param name="organizationId"></param>
+            <param name="storyId">the story id</param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.ProjectManager.API.Controllers.v2.StoryController.DeleteStory(System.Guid,System.Guid)">
+            <summary>
+                Deletes a story
+            </summary>
+            <param name="organizationId"></param>
+            <param name="storyId">the story id</param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.ProjectManager.API.Controllers.v2.StoryController.CreateStory(System.Guid,AgencyPro.Core.Stories.ViewModels.CreateStoryInput)">
+            <summary>
+                Creates a story for a project
+            </summary>
+            <param name="organizationId">the organization id</param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.ProjectManager.API.Controllers.v2.StoryController.AssignStory(System.Guid,System.Guid,AgencyPro.Core.Stories.ViewModels.AssignStoryInput)">
+            <summary>
+            assign a story to a contractor within the organization
+            </summary>
+            <param name="organizationId"></param>
+            <param name="storyId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.ProjectManager.API.Controllers.v2.StoryController.GetById(System.Guid,System.Guid)">
+            <summary>
+                gets a specific story
+            </summary>
+            <param name="organizationId"></param>
+            <param name="storyId">the story id</param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.ProjectManager.API.Controllers.v2.StoryController.GetStories(System.Guid,AgencyPro.Core.Stories.Filters.StoryFilters)">
+            <summary>
+                Gets stories for a project
+            </summary>
+            <param name="organizationId"></param>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.ProjectManager.API.Controllers.v2.StoryController.AddComment(System.Guid,System.Guid,AgencyPro.Core.Comments.ViewModels.CommentInput)">
+            <summary>
+            Add comment to a story
+            </summary>
+            <param name="organizationId"></param>
+            <param name="storyId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.ProjectManager.API.Controllers.v2.TimeController.GetEntries(System.Guid,AgencyPro.Core.TimeEntries.ViewModels.TimeMatrixFilters)">
+            <summary>
+                Gets time entries for contractor
+            </summary>
+            <param name="organizationId">the organization id</param>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.ProjectManager.API.Controllers.v2.TimeController.GetEntry(System.Guid,System.Guid)">
+            <summary>
+            get entry
+            </summary>
+            <param name="organizationId"></param>
+            <param name="entryId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.ProjectManager.API.Controllers.v2.TimeController.UpdateEntry(System.Guid,System.Guid,AgencyPro.Core.TimeEntries.ViewModels.TimeEntryInput)">
+            <summary>
+            updates a time entry
+            </summary>
+            <param name="organizationId"></param>
+            <param name="entryId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.ProjectManager.API.Controllers.v2.TimeController.Approve(System.Guid,System.Guid[])">
+            <summary>
+                Approves Time Entry(ies)
+            </summary>
+            <param name="organizationId"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.ProjectManager.API.Controllers.v2.TimeController.SaveAndApprove(System.Guid,System.Guid,AgencyPro.Core.TimeEntries.ViewModels.TimeEntryInput)">
+            <summary>
+                Approves Time Entry and updates at the same time
+            </summary>
+            <param name="organizationId"></param>
+            <param name="entryId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.ProjectManager.API.Controllers.v2.TimeController.Reject(System.Guid,System.Guid[])">
+            <summary>
+                Rejects Time Entry(ies)
+            </summary>
+            <param name="organizationId"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.ProjectManager.API.Controllers.v2.TimeController.Get(System.Guid,AgencyPro.Core.TimeEntries.ViewModels.TimeMatrixFilters)">
+            <summary>
+                Gets a searchable matrix of time segments
+            </summary>
+            <param name="organizationId"></param>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.ProjectManager.API.Controllers.v2.TimeController.DeleteEntry(System.Guid,System.Guid)">
+            <summary>
+            delete a time entry
+            </summary>
+            <param name="organizationId"></param>
+            <param name="entryId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AccountManager.API.Controllers.v2.StoryTemplateController.GetStoryTemplates(System.Guid,AgencyPro.Core.Common.CommonFilters)">
+            <summary>
+            Get story templates for organization
+            </summary>
+            <param name="organizationId"></param>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AccountManager.API.Controllers.v2.StoryTemplateController.GetStoryTemplate(System.Guid,System.Guid)">
+            <summary>
+            Get story template for organization
+            </summary>
+            <param name="organizationId"></param>
+            <param name="storyTemplateId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AccountManager.API.Controllers.v2.StoryTemplateController.Delete(System.Guid,System.Guid)">
+            <summary>
+            deletes a story template for an organization
+            </summary>
+            <param name="organizationId"></param>
+            <param name="storyTemplateId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AccountManager.API.Controllers.v2.StoryTemplateController.ConvertStoryToTemplate(System.Guid,System.Guid,AgencyPro.Core.StoryTemplates.ViewModels.ConvertStoryInput)">
+            <summary>
+            Converts story to a template
+            </summary>
+            <param name="organizationId"></param>
+            <param name="storyId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AccountManager.API.Controllers.v2.StoryTemplateController.Create(System.Guid,System.Guid,AgencyPro.Core.StoryTemplates.ViewModels.StoryTemplateInput)">
+            <summary>
+            create a new story template
+            </summary>
+            <param name="organizationId"></param>
+            <param name="storyId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.AccountManager.API.Controllers.v2.StoryTemplateController.UpdateTemplate(System.Guid,System.Guid,AgencyPro.Core.StoryTemplates.ViewModels.StoryTemplateInput)">
+            <summary>
+            update story template
+            </summary>
+            <param name="organizationId"></param>
+            <param name="templateId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

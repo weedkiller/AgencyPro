@@ -1,0 +1,13 @@
+﻿@using IdeaFortune.Mailer
+@using IdeaFortune.Mailer.TagHelpers
+@model IdeaFortune.Core.TimeEntries.Emails.AgencyOwnerTimeEntryEmail
+@{
+    Layout = null;
+}
+
+<div>
+    @Model.Introduction()
+    @Model.TimeEntryCreated(Model)
+    @Model.Footer(SectionType.AgencyOwner, Model.ContractorOrganizationName)
+
+</div>

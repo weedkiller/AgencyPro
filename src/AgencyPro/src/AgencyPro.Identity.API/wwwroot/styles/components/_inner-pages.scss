@@ -1,0 +1,193 @@
+
+
+.innerpage-banner {
+    background: #151515 url(../images/intro-bg.jpg) no-repeat center top;
+    padding: 4em 1.5em; 
+    
+   
+
+    h1 {
+      
+      font-weight: 400; 
+        font-size: pxToEm(26);
+      @include mq-min ($tablet) {
+        font-size: pxToEm(36);
+      }
+
+      @include mq-min ($desktop) {
+        font-size: pxToEm(46);
+      }
+    }
+  
+    h2 {
+      font-size: pxToEm(16);
+      font-weight: 300; 
+
+      @include mq-min ($tablet) {
+        font-size: pxToEm(20);
+      }
+    }
+  }
+
+
+.how-it-works-video {
+    h3 {
+        margin-bottom: .5em; 
+    }
+}
+
+
+
+.system-features {
+ 
+    .system-features-outer {
+        display: flex; 
+        align-items: center; 
+        flex-direction: row-reverse; 
+        margin-left: 1.5em;
+        margin-right: 1.5em; 
+        @include mq-max ($desktop-small) {
+            display: block;     
+        }
+    }
+
+    .system-features-slides {
+        width: pxToEm(420);
+        background: #fff;
+        box-shadow: 0px 4px 5px rgba(0,0,0,0.25);
+        position: relative; 
+        left: 2em; 
+        padding: 2em; 
+
+        @include mq-max ($desktop-small) {
+            
+            width: auto;
+            box-sizing: border-box;
+            left: 0;
+            margin-left: 3em;
+            margin-right: 3em;
+        }
+
+        @include mq-max ($tablet) {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+
+    .system-features-slide {
+        h4 {
+            color: $black; 
+            font-size: pxToEm(24);
+            line-height: 1.25em;
+            margin-bottom: pxToEm(10, 26);
+
+            @include mq-max ($tablet) {
+                font-size: pxToEm(20);
+            }
+        }
+ 
+        position: relative; 
+
+        p {
+            @include mq-max ($tablet) {
+                font-size: pxToEm(15);
+            }
+        }
+        p:last-child {
+            text-align:right;
+            margin-top: 1.5em; 
+        }
+        .next-feature {
+            color: $red; 
+            cursor: pointer; 
+        }
+    }
+
+    .component-rates-graphic {
+        flex: 1; 
+        background-color: #ffffff; 
+        img {
+            display: block;
+        }
+
+        video {
+            width: 100%; height: 100%; 
+        }
+    }
+}
+
+
+.ideafortune-comparison {
+  
+    
+}
+
+
+.ideafortune-comparison-outer {
+    max-width: $tablet; 
+    margin:2em  auto 0 auto; 
+
+}
+
+.ideafortune-comparison-item {
+    display: flex; 
+     
+    &:first-child {
+        img {
+            height: 50px; width: auto; 
+            margin: 0 auto;
+        }
+    }
+}
+
+.ideafortune-comparison-column {
+    width: 45%; 
+    display: flex; 
+
+    &:first-child {
+        color: $gray; 
+    }
+
+    
+}
+
+.ideafortune-comparison-column-space {
+    flex: 1; text-align: center; 
+    color: $red; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    font-size: pxToEm(26);
+}
+
+.ideafortune-comparison-box {
+    background: #fff;
+    box-shadow: 0px 4px 5px rgba(0,0,0,0.1);
+    padding: 2em; 
+    margin-top: 1em; 
+    margin-bottom: 1em; 
+    border:1px solid #efefef; 
+
+    @include mq-max ($tablet) {
+        padding: 1.5em; 
+    }
+    h5 {
+        font-size: pxToEm(30);
+        margin-bottom: .25em; 
+        @include mq-max ($tablet) {
+            font-size: pxToEm(26);
+        }
+
+        @include mq-max ($mobile) {
+            font-size: pxToEm(22);
+        }
+    }
+
+    p {
+        font-size: pxToEm(18);
+        @include mq-max ($tablet) {
+            font-size: pxToEm(15);
+        }
+    }
+}
+

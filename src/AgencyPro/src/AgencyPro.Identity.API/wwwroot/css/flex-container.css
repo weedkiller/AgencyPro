@@ -1,0 +1,26 @@
+ html, body {
+    height:100%;
+}
+
+
+  .flex-container {
+    height:100%;
+    display:flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    -webkit-align-content: stretch;
+    align-content: stretch;
+}
+
+.left-item {
+    width:70%;
+}
+
+.right-item {
+    -webkit-flex: 1;
+    flex:1;
+    position:relative;
+    padding-top: 150px;
+    padding-left: 50px;
+}

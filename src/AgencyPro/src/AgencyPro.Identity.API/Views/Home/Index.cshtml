@@ -1,0 +1,12 @@
+<main class="two-cols-nav">
+    <partial name="_SideNav" />
+    <div class="right-col is-flex is-v-centered">
+        <div class="box is-borderless is-shadowless">
+            <p style="margin-left:500px">
+                <a href="/connect/authorize/callback?client_id=angularClient&redirect_uri=@( ViewBag.FlowRedirectUrl )&response_type=id_token token&scope=openid+email+profile+re_api+ag_api+ao_api+ma_api+am_api+pm_api+co_api+cu_api+pe_api&nonce=@(ViewBag.Nonce)" class="button is-primary is-fullwidth">Launch Flow</a>
+            </p>
+        </div>
+    </div>
+</main>
+
+

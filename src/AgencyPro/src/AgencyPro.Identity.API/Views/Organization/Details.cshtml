@@ -1,0 +1,52 @@
+@model AgencyPro.Core.Organizations.ViewModels.OrganizationCreateInput
+
+<main class="two-cols-nav">
+    <partial name="_SideNav" />
+    <div class="right-col is-flex">
+        <div class="box has-gap-left has-gap-right is-borderless is-shadowless">
+            <div class="page-heading">
+                <h1 class="page-title">Organization Details</h1>
+            </div>
+            <div class="box is-fullwidth has-gap-left has-gap-right is-borderless is-shadowless">
+                @if (Model == null)
+                {
+                    <div>Organization not found</div>
+                    <a class="button is-primary" asp-action="Index">Back</a>
+                }
+                else
+                {
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    Name
+                                </td>
+                                <td>
+                                    @Model.Name
+                                </td>
+                            </tr>
+                           
+                            <tr>
+                                <td>
+                                    Description
+                                </td>
+                                <td>
+                                    @Model.Description
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <a class="button is-primary" asp-action="Edit" asp-route-id="@ViewContext.RouteData.Values["id"]">Edit</a>
+                                    <a class="button is-primary" asp-action="Index">Back</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                }
+            </div>
+        </div>
+    </div>
+</main>
+

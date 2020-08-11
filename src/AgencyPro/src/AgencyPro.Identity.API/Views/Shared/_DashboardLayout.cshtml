@@ -1,0 +1,204 @@
+﻿@using IdentityServer4.Extensions
+@{
+    string name = null;
+    if (!true.Equals(ViewData["signed-out"]))
+    {
+        name = Context.User?.GetDisplayName();
+        ViewData["name"] = name;
+    }
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="AgencyPro - It's time to power up your agency." />
+    <link rel="stylesheet" type="text/css" href="~/styles/portal.css" />
+    <link rel="stylesheet" href="~/css/main.css" />
+
+    <title>AgencyPro - It's time to power up your agency.</title>
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+
+<body class="has-navbar-fixed-top">
+    <nav class="navbar  is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="container is-fluid">
+            <div class="navbar-brand">
+                @*<a class="navbar-item" href="index.html"><img src="~/images/logo-white.svg" alt=""></a>*@
+                <div class="navmenu-container" data-target="navbarHeader" role="button">
+                    <input id="responsive-menu" type="checkbox">
+                    <label for="responsive-menu"><span id="menu-icon"><em></em></span></label>
+                    <div id="mobilemenu">
+                        <div class="mobile-menu-container">
+                            <div class="mobile-menu-top">
+                                @*<img class="mobile-logo" src="~/images/logo-white.svg"
+                                     alt="AgencyPro -  It's time to power up your agency." />*@
+                            </div>
+                            <div class="mobile-menu-middle">
+                                @if (!string.IsNullOrWhiteSpace(name))
+                                {
+                                    <ul>
+                                        <li>Hi,   @name</li>
+                                        <li>
+                                            <a class="navbar-item" asp-action="Logout" asp-controller="Account">Logout</a>
+                                        </li>
+                                    </ul>
+                                }
+                                @if (string.IsNullOrWhiteSpace(name))
+                                {
+                                    <ul>
+                                        <li><a href="/account/login">Login</a></li>
+                                        @*<li><a href="/account/register">Register</a></li>*@
+                                    </ul>
+                                }
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navbar-menu">
+                <div class="navbar-end">
+                    @if (!string.IsNullOrWhiteSpace(name))
+                    {
+                        <a class="navbar-item">
+                            Hi,   @name
+
+                        </a>
+                        <a class="navbar-item" asp-action="Logout" asp-controller="Account">Logout</a>
+                    }
+                    @if (string.IsNullOrWhiteSpace(name))
+                    {
+                        <a class="navbar-item" href="/account/login">
+                            <span class="icon">
+                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="301.797px"
+                                     height="155.852px" viewBox="0 0 301.797 155.852"
+                                     enable-background="new 0 0 301.797 155.852" xml:space="preserve">
+                                <g>
+                                <polygon fill="#FFFFFF"
+                                         points="7.873,147.078 150.587,4.365 170.535,24.313 47.353,147.497 	" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                <polygon fill="#FFFFFF" points="67.581,147.497 149.958,65.12 233.384,148.543 185.602,148.543 149.714,112.655 115.083,147.288
+             " />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                <polygon fill="#FFFFFF"
+                                         points="160.212,54.446 180.16,34.497 293.509,147.846 254.52,147.846 	" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                </g>
+                            </svg>
+                            </span>&nbsp;<span>Login</span>
+                        </a>
+                        @*<a class="navbar-item" href="/account/register">
+                            Register
+                        </a>*@
+                    }
+                    </div>
+            </div>
+        </div>
+    </nav>
+
+    @RenderBody()
+    <script type="text/javascript" src="~/js/vendors/jquery.min.js"></script>
+    <script type="text/javascript" src="~/js/plugins/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="~/js/plugins/jquery.fancybox.js"></script>
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
+    <script type="text/javascript" src="~/js/site.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

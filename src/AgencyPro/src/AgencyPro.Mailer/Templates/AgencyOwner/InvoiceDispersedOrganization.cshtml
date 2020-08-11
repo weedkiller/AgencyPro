@@ -1,0 +1,15 @@
+﻿@using IdeaFortune.Mailer
+@using IdeaFortune.Mailer.TagHelpers
+@model IdeaFortune.Core.DisperseFunds.Emails.OrganizationTransferEmail
+@{
+    Layout = null;
+}
+
+<div>
+    @Model.Introduction()
+
+    @Model.InvoiceDispersedOrganization(Model)
+
+    @Model.Footer(SectionType.OrganizationPerson)
+
+</div>

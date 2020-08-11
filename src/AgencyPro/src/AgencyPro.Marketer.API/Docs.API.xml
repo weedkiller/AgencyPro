@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AgencyPro.Marketer.API</name>
+    </assembly>
+    <members>
+        <member name="M:AgencyPro.Marketer.API.Controllers.v2.AgencyController.GetOrganizations">
+            <summary>
+            get organizations that marketer could join
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Marketer.API.Controllers.v2.ContractController.Get(System.Guid,AgencyPro.Core.Contracts.Filters.ContractFilters)">
+            <summary>
+                Get contracts
+            </summary>
+            <param name="organizationId">the organization id</param>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Marketer.API.Controllers.v2.ContractController.Get(System.Guid,System.Guid)">
+            <summary>
+                Gets a contract
+            </summary>
+            <param name="organizationId">the organization id</param>
+            <param name="contractId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Marketer.API.Controllers.v2.CustomerController.GetCustomers(System.Guid,AgencyPro.Core.Common.CommonFilters)">
+            <summary>
+                Gets all the customers for the current marketer
+            </summary>
+            <param name="organizationId"></param>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Marketer.API.Controllers.v2.LeadController.CreateLead(System.Guid,AgencyPro.Core.Leads.ViewModels.LeadInput)">
+            <summary>
+                MA creates a internal lead
+            </summary>
+            <param name="organizationId">the org id</param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Marketer.API.Controllers.v2.LeadController.CreateExternalLead(System.Guid,System.Guid,AgencyPro.Core.Leads.ViewModels.LeadInput)">
+            <summary>
+                MA creates an external lead
+            </summary>
+            <param name="organizationId"></param>
+            <param name="externalId"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Marketer.API.Controllers.v2.LeadController.GetLeads(System.Guid,AgencyPro.Core.Common.CommonFilters)">
+            <summary>
+                ma get leads
+            </summary>
+            <param name="organizationId">the org id</param>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Marketer.API.Controllers.v2.LeadController.UpdateLead(System.Guid,System.Guid,AgencyPro.Core.Leads.ViewModels.LeadInput)">
+            <summary>
+                updates a lead
+            </summary>
+            <param name="organizationId">the organization id</param>
+            <param name="leadId">the lead id</param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Marketer.API.Controllers.v2.LeadController.GetLead(System.Guid,System.Guid)">
+            <summary>
+                ma get lead
+            </summary>
+            <param name="organizationId">the org id</param>
+            <param name="leadId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Marketer.API.Controllers.v2.LeadController.DeleteLead(System.Guid,System.Guid)">
+            <summary>
+                deletes a lead
+            </summary>
+            <param name="organizationId"></param>
+            <param name="leadId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Marketer.API.Controllers.v2.LeadController.Get(System.Guid,AgencyPro.Core.Leads.ViewModels.LeadMatrixFilters)">
+            <summary>
+                gets a matrix of lead information
+            </summary>
+            <param name="organizationId"></param>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Marketer.API.Controllers.v2.LeadController.AddComment(System.Guid,System.Guid,AgencyPro.Core.Comments.ViewModels.CommentInput)">
+            <summary>
+                Add comment to a lead
+            </summary>
+            <param name="organizationId"></param>
+            <param name="leadId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Marketer.API.Controllers.v2.OrganizationController.GetCounts(System.Guid)">
+            <summary>
+            Get counts for marketer
+            </summary>
+            <param name="organizationId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Marketer.API.Controllers.v2.ProviderOrganizationController.GetProviderOrganizations(System.Guid)">
+            <summary>
+            gets a list of all provider organizations that the agency has agreements with 
+            </summary>
+            <param name="organizationId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Marketer.API.Controllers.v2.TimeController.Get(System.Guid,AgencyPro.Core.TimeEntries.ViewModels.TimeMatrixFilters)">
+            <summary>
+                Gets a searchable matrix of time segments
+            </summary>
+            <param name="organizationId"></param>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

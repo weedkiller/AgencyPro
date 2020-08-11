@@ -1,0 +1,16 @@
+﻿@using IdeaFortune.Mailer
+@using IdeaFortune.Mailer.TagHelpers
+@model IdeaFortune.Core.Contracts.Emails.ProjectManagerContractEmail
+@{
+    Layout = null;
+}
+
+<div>
+
+    @Model.Introduction()
+
+    @Model.ContractRestarted(Model)
+
+    @Model.Footer(SectionType.ProjectManager, Model.ProjectManagerOrganizationName)
+
+</div>

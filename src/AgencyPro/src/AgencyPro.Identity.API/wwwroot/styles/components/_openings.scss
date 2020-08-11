@@ -1,0 +1,71 @@
+.openings {
+    padding-top: 3em; 
+    padding-bottom: 3em; 
+
+   
+}
+
+ 
+
+
+.cards.companies {
+    justify-content: space-between; 
+    display: flex; 
+    flex-wrap: wrap; 
+    flex-direction: row; 
+    margin-top:2em; 
+    @include mq-max ($desktop-small) {
+        margin-left: 1.5em;
+        margin-right: 1.5em; 
+    }
+    .card {
+        border: 1px solid #f1f1f2; 
+        border-radius: 6px; 
+        box-shadow: 1px 3px 5px rgba(0,0,0,.12);
+        padding: 1.5em; 
+        width: 100%; 
+        margin-top: 2em; 
+        @include mq-min (641px) {
+            width: 48%; 
+        }
+
+        @include mq-min ($desktop-small) {
+            width: 31%; 
+        }
+
+    } 
+
+    .card-header {
+        display: flex; 
+        align-items: center; 
+        box-shadow: none; 
+        margin-bottom: 1.5em; 
+        > div:first-child {
+            width: 60px; 
+            margin-right: 1em; 
+        }
+
+        > div {
+            
+        }
+    }
+    
+    .company-excerpt {
+        margin: 1em 0; 
+        font-size: pxToEm(14);
+    }
+
+    .company-metrics {
+        > p { 
+            margin: 0.25em 0; 
+        }
+    }
+
+    .card-footer {
+        border: none; 
+        margin-top: 1em; 
+        > a {
+            @extend .has-text-danger; 
+        }
+    }
+}

@@ -1,0 +1,46 @@
+@mixin fw() {
+    font-weight: 400; 
+    text-transform: none; 
+    line-height: 1.25em; 
+    &.is-light {
+        font-weight: 300; 
+    }
+
+    &.is-semibold {
+        font-weight: 600; 
+    }
+
+    &.is-bold {
+        font-weight: 700;
+    }   
+}
+
+.hd {
+    margin-bottom: .5em; 
+    @include fw();
+}
+
+.hd-1 {
+    font-size: pxToEm(54);   
+}
+
+.hd-2 {
+    font-size: pxToEm(44); 
+}
+
+.hd-3 {
+    font-size: pxToEm(36);  
+}
+
+.hd-4 {
+    font-size: pxToEm(28); 
+    
+}
+
+.hd-5 {
+    font-size: pxToEm(24); 
+}
+
+.hd-6 {
+    font-size: pxToEm(18); 
+}

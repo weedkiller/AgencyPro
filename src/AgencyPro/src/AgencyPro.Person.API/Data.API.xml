@@ -1,0 +1,149 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AgencyPro.Person.API</name>
+    </assembly>
+    <members>
+        <member name="M:AgencyPro.Person.API.Controllers.v2.BillingCategoryController.GetBillingCategories(System.Int32)">
+            <summary>
+            Get all the billing categories for a category
+            </summary>
+            <param name="categoryId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Person.API.Controllers.v2.BootstrapController.ShowAffiliation(System.Guid)">
+            <summary>
+            Show an organization
+            </summary>
+            <param name="organizationId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Person.API.Controllers.v2.BootstrapController.HideAffiliation(System.Guid)">
+            <summary>
+            Hides an organization
+            </summary>
+            <param name="organizationId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Person.API.Controllers.v2.ContractorController.Update(AgencyPro.Core.Roles.ViewModels.Contractors.ContractorUpdateInput)">
+            <summary>
+            updates a contractor profile
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Person.API.Controllers.v2.FinancialAccountController.GetFinancialAccount">
+            <summary>
+            Gets the financial accounts of a customer
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Person.API.Controllers.v2.FinancialAccountController.GetAuthUrl(System.Guid)">
+            <summary>
+                Get the stripe auth url for the current customer
+            </summary>
+            <param name="organizationId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Person.API.Controllers.v2.FinancialAccountController.GetStripeUrl(System.Guid)">
+            <summary>
+            gets the stripe url to login to express dashboard
+            </summary>
+            <param name="organizationId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Person.API.Controllers.v2.FinancialAccountController.RemoveFinancialAccount">
+            <summary>
+            Remove the financial account from the customer
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Person.API.Controllers.v2.GeoController.#ctor(AgencyPro.Core.UserAccount.Services.IUserInfo,AgencyPro.Core.Geo.Services.IGeoService,Microsoft.Extensions.Caching.Memory.IMemoryCache)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AgencyPro.Person.API.Controllers.v2.GeoController" /> class.
+            </summary>
+            <param name="userInfo">The user information.</param>
+            <param name="geoService">The country service.</param>
+            <param name="cache">The memory cache.</param>
+        </member>
+        <member name="M:AgencyPro.Person.API.Controllers.v2.GeoController.GetCountries(System.Int32,System.Int32)">
+            <summary>
+            Gets all countries.
+            </summary>
+            <param name="page">Index of the page.</param>
+            <param name="size">Size of the page.</param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Person.API.Controllers.v2.GeoController.GetLanguages(System.Int32,System.Int32)">
+            <summary>
+            Gets all languages.
+            </summary>
+            <param name="page">Index of the page.</param>
+            <param name="size">Size of the page.</param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Person.API.Controllers.v2.GeoController.GetEnabledCountries(System.Int32,System.Int32)">
+            <summary>
+            Gets all enabled countries.
+            </summary>
+            <param name="page">Index of the page.</param>
+            <param name="size">Size of the page.</param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Person.API.Controllers.v2.GeoController.GetProvinceStates(System.Int32,System.Int32,System.String)">
+            <summary>
+            Gets all countries' states.
+            </summary>
+            <param name="page">Index of the page.</param>
+            <param name="size">Size of the page.</param>
+            <param name="iso2">The iso2.</param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Person.API.Controllers.v2.NotificationController.Get(System.Guid,AgencyPro.Core.Notifications.NotificationFilters)">
+            <summary>
+            Get notifications
+            </summary>
+            <param name="organizationId"></param>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Person.API.Controllers.v2.PayoutController.Commission(System.Guid)">
+            <summary>
+            Get commission
+            </summary>
+            <param name="organizationId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Person.API.Controllers.v2.SkillController.GetSkills(System.Guid)">
+            <summary>
+            Gets the skills of the organization
+            </summary>
+            <param name="organizationId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Person.API.Controllers.v2.SkillController.AddSkill(System.Guid,AgencyPro.Core.Skills.ViewModels.ContractorSkillInput)">
+            <summary>
+            Assign skill to contractor
+            </summary>
+            <param name="skillId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Person.API.Controllers.v2.SkillController.UpdateSkill(System.Guid,AgencyPro.Core.Skills.ViewModels.ContractorSkillInput)">
+            <summary>
+            Update contractor skill
+            </summary>
+            <param name="skillId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Person.API.Controllers.v2.SkillController.RemoveSkill(System.Guid,System.Guid)">
+            <summary>
+            Removes a skill from an organization
+            </summary>
+            <param name="organizationId"></param>
+            <param name="skillId"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

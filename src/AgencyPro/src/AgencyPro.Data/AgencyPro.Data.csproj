@@ -1,0 +1,111 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <LangVersion>7.3</LangVersion>
+
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="EFCore\Contexts\**" />
+    <Compile Remove="Migrations\Scripts\**" />
+    <EmbeddedResource Remove="EFCore\Contexts\**" />
+    <EmbeddedResource Remove="Migrations\Scripts\**" />
+    <None Remove="EFCore\Contexts\**" />
+    <None Remove="Migrations\Scripts\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20190730152954_ifrequired.cs" />
+    <Compile Remove="Migrations\20190730152954_ifrequired.Designer.cs" />
+    <Compile Remove="Migrations\20190821203850_PauseContract.cs" />
+    <Compile Remove="Migrations\20190821210710_PauseContract.cs" />
+    <Compile Remove="Migrations\20191130033326_CommentsAddedToStoryContractAndProject2.cs" />
+    <Compile Remove="Migrations\20191130084100_CommentsAddedToStoryContractAndProject2.cs" />
+    <Compile Remove="Migrations\20191216133223_StripeIntegration5.cs" />
+    <Compile Remove="Migrations\20191217010508_PlansAdded6.cs" />
+    <Compile Remove="Migrations\20191218195213_normalizingAudits.cs" />
+    <Compile Remove="Migrations\20191226175739_UpdatedFinancialAccount2.cs" />
+    <Compile Remove="Migrations\20191227213615_StripeDataModelIntegration1.cs" />
+    <Compile Remove="Migrations\20191228011145_StripeDataModelIntegration2.cs" />
+    <Compile Remove="Migrations\20191230205301_RenameInvoiceToProjectInvoice2.cs" />
+    <Compile Remove="Migrations\20191230205807_RenameInvoiceToProjectInvoice2.cs" />
+    <Compile Remove="Migrations\20200110193022_RafactoringOrgDataModelToProviders3.cs" />
+    <Compile Remove="Migrations\20200310042607_RetainerAdded.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="appsettings.json" />
+    <None Remove="Seeders\csv\countries.csv" />
+    <None Remove="Seeders\csv\currency.csv" />
+    <None Remove="Seeders\csv\languages.csv" />
+    <None Remove="Seeders\csv\province_states.csv" />
+    <None Remove="Seeders\csv\skills.csv" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="appsettings.json">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Seeders\csv\countries.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seeders\csv\currency.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seeders\csv\languages.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seeders\csv\province_states.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seeders\csv\skills.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LINQKit.Core" Version="1.1.16" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="CsvHelper">
+      <Version>12.1.2</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore">
+      <Version>2.2.1</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore">
+      <Version>2.2.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore">
+      <Version>2.2.6</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design">
+      <Version>2.2.6</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory">
+      <Version>2.2.6</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational">
+      <Version>2.2.6</Version>
+    </PackageReference>
+    <PackageReference Include="microsoft.entityframeworkcore.sqlserver" Version="2.2.6" />
+
+    <PackageReference Include="System.Data.Common">
+      <Version>4.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Linq.Expressions">
+      <Version>4.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Reflection">
+      <Version>4.3.0</Version>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AgencyPro.Core\AgencyPro.Core.csproj" />
+  </ItemGroup>
+
+</Project>

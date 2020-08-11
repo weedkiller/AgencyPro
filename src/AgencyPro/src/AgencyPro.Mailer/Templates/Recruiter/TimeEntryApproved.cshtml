@@ -1,0 +1,14 @@
+﻿@using IdeaFortune.Mailer
+@using IdeaFortune.Mailer.TagHelpers
+@model IdeaFortune.Core.TimeEntries.Emails.RecruiterTimeEntryEmail
+@{
+    Layout = null;
+}
+
+<div>
+    @Model.Introduction()
+    @Model.TimeEntryApproved(Model)
+
+    @Model.Footer(SectionType.Recruiter, Model.RecruitingOrganizationName)
+
+</div>

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AgencyPro.Admin.API</name>
+    </assembly>
+    <members>
+        <member name="M:AgencyPro.Admin.API.Controllers.v2.PeopleController.GetPeople">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

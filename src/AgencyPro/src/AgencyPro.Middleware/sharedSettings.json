@@ -1,0 +1,102 @@
+﻿{
+  "Serilog": {
+    "MinimumLevel": {
+      "Default": "Debug",
+      "Override": {
+        "Microsoft.AspNetCore": "Warning",
+        "IdentityServer4": "Information"
+      }
+    }
+  },
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=(localdb)\\mssqllocaldb;Database=AgencyPro;Trusted_Connection=True;MultipleActiveResultSets=true",
+   
+    "CacheConnection": "localhost:6379",
+    "workforce_AzureStorageConnectionString": "<enter your own>"
+  },
+  "ApplicationInsights": {
+    "InstrumentationKey": "<enter your own>"
+  },
+  "AppSettings": {
+    "ASPNETCORE_ENVIRONMENT": "Development",
+    "Stripe": {
+      "SecretApiKey": "<enter your own>",
+      "PublicApiKey": "<enter your own>"
+    },
+    "Email": {
+      "FromName": "<enter your own>",
+      "FromEmail": "<enter your own>",
+      "ApiKey": "<enter your own>",
+      "SendMail": "true"
+    },
+    "Auth": {
+      "AccountLockoutDuration": "00:10:00",
+      "AccountLockoutFailedLoginAttempts": 10,
+      "AllowAccountDeletion": false,
+      "AllowEmailChangeWhenEmailIsUsername": false,
+      "AllowLoginAfterAccountCreation": true,
+      "AllowMultipleMobileLogin": false,
+      "EmailIsUsername": false,
+      "MinimumPasswordLength": 50,
+      "PasswordHashingIterationCount": 10,
+      "PasswordResetFrequency": 0,
+      "MobileVerificationCodeLength": 6,
+      "MobileCodeStaleDurationMinutes": 10,
+      "MobileCodeResendDelayMinutes": 1,
+      "TwoFactorAuthTokenDurationDays": 30,
+      "RequireAccountVerification": true,
+      "VerificationKeyLifetime": "10:00:00",
+      "EmailIsUnique": true
+    },
+    "Information": {
+      "Name": "AgencyPro API",
+      "Version": "v2",
+      "Description": "The Agency Platform",
+      "Keywords": "",
+      "TermsOfService": "",
+      "Copyright": "Copyright © 2019 AgencyPro LLC, All rights reserved",
+      "HomePage": "https://www.ideafortune.com/",
+      "ContactName": "Rod Johnson",
+      "ContactEmail": "support@ideafortune.com",
+      "LicenseName": "Proprietary",
+      "LicenseUrl": "https://www.ideafortune.com"
+    },
+    "Twilio": {
+      "Sid": "<enter your own>",
+      "Token": "<enter your own>",
+      "BaseUri": "https://api.twilio.com",
+      "RequestUri": "/2010-04-01/Accounts/<enter your own>/Messages.json",
+      "From": "<enter your own>"
+    },
+    "Urls": {
+      "Origin": "https://localhost:44374",
+      "AO": "https://localhost:44317/",
+      "AM": "https://localhost:44358/",
+      "CU": "https://localhost:44342/",
+      "CO": "https://localhost:44359/",
+      "PM": "https://localhost:44315/",
+      "RE": "https://localhost:44379/",
+      "MA": "https://localhost:44350/",
+      "PE": "https://localhost:44329/",
+      "ID": "https://localhost:44374/",
+      "Flow": "https://localhost:4200/",
+      "FlowRedirect": "http://localhost:4200/callback.html",
+      "FlowPostLogoutRedirect": "http://localhost:4200/callback.html",
+      "Portal": "https://localhost:3200/",
+      "PortalRedirect": "http://localhost:3200/callback.html",
+      "PortalPostLogoutRedirect": "http://localhost:3200/callback.html",
+      "Admin": "https://localhost:2200/",
+      "AdminRedirect": "http://localhost:2200/callback.html",
+      "AdminPostLogoutRedirect": "http://localhost:2200/callback.html",
+      "LoginPage": "account/login",
+      "ErrorPage": "error",
+      "InfoPage": "info",
+      "Token": "token",
+      "VerifyAccount": "/api/v1/account/verify",
+      "ConfirmChangeEmail": "/api/v1/account/verify",
+      "CancelVerification": "/api/v1/account/verify/cancel",
+      "ConfirmPasswordReset": "/api/v1/account/passwordreset/confirm"
+    }
+  }
+
+}

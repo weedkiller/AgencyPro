@@ -1,0 +1,72 @@
+@model AgencyPro.Core.Login.ViewModels.LoginViewModel
+
+<main class="two-cols-membership">
+    <div class="left-col fullbg-matte"></div>
+    <div class="right-col is-flex is-v-centered">
+
+        <div class="box is-fullwidth has-gap-left has-gap-right is-borderless is-shadowless">
+
+            @if (!string.IsNullOrEmpty(TempData["LogOutRedirectMessage"]?.ToString())) {
+                <h2 style="color: grey; font-size: x-large; font-weight : bold;">@TempData["LogOutRedirectMessage"].ToString()</h2><br />
+            }
+
+            <div class="page-heading">
+                <h1 class="page-title">Login</h1>
+            </div>
+            <form asp-route="Login">
+                <partial name="_ValidationSummary" />
+                <input type="hidden" asp-for="ReturnUrl" />
+                <div class="field">
+                    <label asp-for="Username" class="label">Username</label>
+                    <div class="control has-icons-left">
+                        <input class="input validate" asp-for="Username" placeholder="Username" autofocus="" type="text"
+                               data-val="true" data-val-required="The Username field is required." id="Username"
+                               name="Username" value="">
+                        <span class="icon is-small is-left">
+                            <i class="fa fa-envelope"></i>
+                        </span>
+                        <span asp-validation-for="Username" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="field">
+                    <label asp-for="Password" class="label">Password</label>
+                    <div class="control has-icons-left">
+                        <input asp-for="Password" type="password" class="input  validate" placeholder="Password" autocomplete="off"
+                               data-val="true" data-val-required="The Password field is required." id="Password"
+                               name="Password">
+
+                        <span class="icon is-small is-left">
+                            <i class="fa fa-lock"></i>
+                        </span>
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="remember-login" class="checkbox" asp-for="RememberLogin">
+                        <input type="checkbox" name="remember-login" id="remember-login" asp-for="RememberLogin">
+                        Remember me
+                    </label>
+                </div>
+                <div class="field">
+                    <button class="button is-primary is-fullwidth" name="button" value="login">Login</button>
+
+
+                </div>
+
+                <div class="field">
+                    <p class="has-text-right is-size-7">
+                        <a href="/Account/ForgotPassword">
+                            I can't remember my password
+                        </a>
+                    </p>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</main>
+
+@section Scripts
+{
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

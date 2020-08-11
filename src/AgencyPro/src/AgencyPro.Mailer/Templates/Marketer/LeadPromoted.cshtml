@@ -1,0 +1,15 @@
+﻿@using IdeaFortune.Mailer
+@using IdeaFortune.Mailer.TagHelpers
+@model IdeaFortune.Core.Leads.Emails.MarketerLeadEmail
+@{
+    Layout = null;
+}
+
+<div>
+    @Model.Introduction()
+  
+    @Model.LeadPromoted(Model)
+
+    @Model.Footer(SectionType.Marketer, Model.MarketerOrganizationName)
+
+</div>

@@ -1,0 +1,19 @@
+﻿@using IdeaFortune.Mailer
+@using IdeaFortune.Mailer.TagHelpers
+@model IdeaFortune.Core.Registration.Emails.WelcomeEmail
+@{
+    Layout = null;
+}
+
+<div>
+    @Model.Introduction()
+
+    <p>
+        Welcome to IdeaFortune!
+    </p>
+
+    <a href="@Model.FlowUrl">Click Here</a> to login.
+
+    @Model.Footer(SectionType.OrganizationPerson)
+
+</div>

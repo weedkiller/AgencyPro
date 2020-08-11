@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AgencyPro.Recruiter.API</name>
+    </assembly>
+    <members>
+        <member name="M:AgencyPro.Recruiter.API.Controllers.v2.AgencyController.GetOrganizations">
+            <summary>
+            get organizations that marketer could join
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Recruiter.API.Controllers.v2.CandidateController.CreateCandidate(System.Guid,AgencyPro.Core.Candidates.ViewModels.CandidateInput)">
+            <summary>
+                creates a new candidate
+            </summary>
+            <param name="organizationId"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Recruiter.API.Controllers.v2.CandidateController.CreateExternalCandidate(System.Guid,System.Guid,AgencyPro.Core.Candidates.ViewModels.CandidateInput)">
+            <summary>
+            Create external candidate
+            </summary>
+            <param name="organizationId"></param>
+            <param name="externalId"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Recruiter.API.Controllers.v2.CandidateController.UpdateCandidate(System.Guid,System.Guid,AgencyPro.Core.Candidates.ViewModels.CandidateInput)">
+            <summary>
+                updates a candidate
+            </summary>
+            <param name="organizationId"></param>
+            <param name="candidateId"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Recruiter.API.Controllers.v2.CandidateController.GetCandidate(System.Guid,System.Guid)">
+            <summary>
+                get candidate
+            </summary>
+            <param name="organizationId">the org id</param>
+            <param name="candidateId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Recruiter.API.Controllers.v2.CandidateController.GetCandidates(System.Guid,AgencyPro.Core.Common.CommonFilters)">
+            <summary>
+                Gets candidates for a recruiter
+            </summary>
+            <param name="organizationId"></param>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Recruiter.API.Controllers.v2.CandidateController.DeleteCandidate(System.Guid,System.Guid)">
+            <summary>
+                deletes a candidate
+            </summary>
+            <param name="organizationId"></param>
+            <param name="candidateId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Recruiter.API.Controllers.v2.CandidateController.AddComment(System.Guid,System.Guid,AgencyPro.Core.Comments.ViewModels.CommentInput)">
+            <summary>
+            Add comment to a candidate
+            </summary>
+            <param name="organizationId"></param>
+            <param name="candidateId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Recruiter.API.Controllers.v2.ContractController.GetContracts(System.Guid,AgencyPro.Core.Contracts.Filters.ContractFilters)">
+            <summary>
+                recruiter can get their contracts
+            </summary>
+            <param name="organizationId">the organization id</param>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Recruiter.API.Controllers.v2.ContractController.GetContract(System.Guid,System.Guid)">
+            <summary>
+                Get contract
+            </summary>
+            <param name="organizationId">the organization id</param>
+            <param name="contractId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Recruiter.API.Controllers.v2.ContractorController.GetContractors(System.Guid,AgencyPro.Core.Common.CommonFilters)">
+            <summary>
+                Gets all the customers for the current marketer
+            </summary>
+            <param name="organizationId"></param>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Recruiter.API.Controllers.v2.OrganizationController.GetOrganizationInfo(System.Guid)">
+            <summary>
+            get organization from recruiter perspective
+            </summary>
+            <param name="organizationId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Recruiter.API.Controllers.v2.OrganizationController.GetCounts(System.Guid)">
+            <summary>
+            Get counts for recruiter
+            </summary>
+            <param name="organizationId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Recruiter.API.Controllers.v2.ProviderOrganizationController.GetProviderOrganizations(System.Guid)">
+            <summary>
+            gets a list of all provider organizations that the agency has agreements with 
+            </summary>
+            <param name="organizationId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Recruiter.API.Controllers.v2.TimeController.Get(System.Guid,AgencyPro.Core.TimeEntries.ViewModels.TimeMatrixFilters)">
+            <summary>
+                Gets a searchable matrix of time segments
+            </summary>
+            <param name="organizationId"></param>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

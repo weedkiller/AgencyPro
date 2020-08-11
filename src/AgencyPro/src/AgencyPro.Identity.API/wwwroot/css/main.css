@@ -1,0 +1,44 @@
+﻿.logo {
+    display: inline-block;
+    height: 100%;
+    margin-left: 20px;
+    font-size: 25px;
+}
+
+    .logo > img {
+        vertical-align: middle;
+        position: relative;
+        height: 40px;
+        margin-right: 20px;
+    }
+
+.brand-logo {
+    left: 5% !important;
+}
+
+#inner {
+    width: 50%;
+    margin: 0 auto;
+    text-align:center
+}
+
+
+
+.center1 {
+    height: 90vh;
+    position: relative;
+}
+
+    .center1 p {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+    .wrapper {
+        padding-left:300px;
+    }
+    

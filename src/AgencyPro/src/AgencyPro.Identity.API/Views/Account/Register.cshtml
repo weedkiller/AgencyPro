@@ -1,0 +1,154 @@
+﻿@model AgencyPro.Core.Registration.ViewModels.RegisterViewModel
+
+<main class="two-cols-membership">
+    <div class="left-col fullbg-matte"></div>
+    <div class="right-col is-flex is-v-centered">
+
+        <div class="box is-fullwidth has-gap-left has-gap-right is-borderless is-shadowless">
+
+            <form asp-route="Register">
+                <partial name="_ValidationSummary" />
+                <input type="hidden" asp-for="ReturnUrl" />
+                <div class="field">
+                    <label asp-for="InvitationCode" class="label">Invitation Code</label>
+                    <div class="control has-icons-left">
+                        <input class="input validate" asp-for="InvitationCode" placeholder="Invitation Code" autofocus="" type="text"
+                               data-val="true" data-val-required="The Invitation Code field is required." id="Invitation Code"
+                               name="InvitationCode" value="">
+                        <span class="icon is-small is-left">
+                            <i class="fa fa-chevron-right"></i>
+                        </span>
+                        <span asp-validation-for="InvitationCode" class="text-danger danger"></span>
+                    </div>
+                </div>
+                <div class="field">
+                    <label asp-for="Email" class="label">Email</label>
+                    <div class="control has-icons-left">
+                        <input class="input validate" asp-for="Email" placeholder="Email" autofocus="" type="text"
+                               data-val="true" data-val-required="The Email field is required." id="Email"
+                               name="Email" value="">
+                        <span class="icon is-small is-left">
+                            <i class="fa fa-envelope"></i>
+                        </span>
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="field">
+                    <label asp-for="Password" class="label">Password</label>
+                    <div class="control has-icons-left">
+                        <input asp-for="Password" type="password" class="input  validate" placeholder="Password" autocomplete="off"
+                               data-val="true" data-val-required="The Password field is required." id="Password"
+                               name="Password">
+
+                        <span class="icon is-small is-left">
+                            <i class="fa fa-lock"></i>
+                        </span>
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="field">
+                    <label asp-for="ConfirmPassword" class="label">Confirm Password</label>
+                    <div class="control has-icons-left">
+                        <input asp-for="ConfirmPassword" type="password" class="input  validate" placeholder="ConfirmPassword" autocomplete="off"
+                               data-val="true" data-val-required="The Confirm Password field is required." id="ConfirmPassword"
+                               name="ConfirmPassword">
+
+                        <span class="icon is-small is-left">
+                            <i class="fa fa-lock"></i>
+                        </span>
+                        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="field">
+                    <label asp-for="FirstName" class="label">First Name</label>
+                    <div class="control has-icons-left">
+                        <input class="input validate" asp-for="FirstName" placeholder="FirstName" autofocus="" type="text"
+                               id="FirstName" name="FirstName">
+                        <span class="icon is-small is-left">
+                            <i class="fa fa-envelope"></i>
+                        </span>
+                        <span asp-validation-for="FirstName" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="field">
+                    <label asp-for="LastName" class="label">Last Name</label>
+                    <div class="control has-icons-left">
+                        <input class="input validate" asp-for="LastName" placeholder="LastName" autofocus="" type="text"
+                               id="LastName" name="LastName">
+                        <span class="icon is-small is-left">
+                            <i class="fa fa-envelope"></i>
+                        </span>
+                        <span asp-validation-for="LastName" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">Country</label>
+                    <div class="control has-icons-left">
+                        <select class="input" asp-items="@ViewBag.Country" data-val="true" data-val-required="The Country field is required." id="countrylist" name="Iso2">
+                        </select>
+                        <span class="icon is-small is-left">
+                            <i class="fa fa-envelope"></i>
+                        </span>
+                        <span asp-validation-for="Iso2" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">Province/State</label>
+                    <div class="control has-icons-left">
+                        <select class="input" id="statelist"  data-val="true" data-val-required="The State field is required." name="ProvinceState">
+                        </select>
+                        <span class="icon is-small is-left">
+                            <i class="fa fa-envelope"></i>
+                        </span>
+                        <span asp-validation-for="ProvinceState" class="text-danger"></span>
+                    </div>
+                </div>
+
+
+                <div class="field">
+                    <button class="button is-primary is-fullwidth" name="button" value="register">Register</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</main>
+
+@section Scripts
+{
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script type="text/javascript">
+        //Insert default item "Select" in dropdownlist on load
+        $(document).ready(function () {
+            loadStates();
+        });
+
+        var loadStates = function () {
+            var countryId = $("#countrylist").val();
+            var item = '<option value="">--Select one--</option>';
+            if (!!countryId) {
+                var url = "/ProvinceState/states";
+
+                $.getJSON(url,
+                    { iso2: countryId },
+                    function (data) {
+                        $("#statelist").empty();
+                        $.each(data,
+                            function (i, city) {
+                                item += '<option value="' + city.value + '">' + city.text + '</option>'
+                            });
+                        $("#statelist").html(item);
+                    });
+            } else {
+                $("#statelist").empty();
+                $("#statelist").html(item);
+            }
+            
+        };
+
+        //Bind City dropdownlist
+        $("#countrylist").change(loadStates);
+    </script>
+}

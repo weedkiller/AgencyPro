@@ -1,0 +1,196 @@
+@import "global";
+@import "heading";
+@import "header";
+@import "hero";
+@import "features";
+@import "who-we-are";
+@import "get-started";
+@import "investors-intro";
+@import "footer";
+@import "inner-pages";
+@import "video";
+@import "blog";
+@import "investors";
+@import "openings";
+
+
+.section-type-a {
+    padding-top: 3em; 
+    padding-bottom: 3em; 
+
+    @include mq-min ($tablet) {
+        padding-top: 4em; 
+        padding-bottom: 4em;     
+    }
+}
+
+
+.section-type-b {
+    padding-top: 3em; 
+    padding-bottom: 3em; 
+    background-color: #f1f1f1; 
+    @include mq-min ($tablet) {
+        padding-top: 4em; 
+        padding-bottom: 4em; 
+
+    
+      }
+
+}
+
+.section-has-gab-tablet {
+    @include mq-max ($tablet) {
+        margin-left: 1.5em;
+        margin-right: 1.5em; 
+    }
+}
+
+
+.section-has-gab-desktop-only {
+    @include mq-min ($tablet) {
+        margin-left: 1.5em;
+        margin-right: 1.5em; 
+    }
+}
+
+.section-has-gab-on-small-desktop { 
+    @include mq-max ($desktop-small) {
+        padding-left: 1.5em;
+        padding-right: 1.5em;  
+    }
+}
+
+
+
+.two-cols-image-content-1,
+.two-cols-image-content-2 {
+    display: flex; 
+    align-items: center; 
+    margin-top: 3em;
+    margin-bottom: 3em;  
+
+    @include mq-max ($desktop-small) {
+        margin-left: 1.5em; 
+        margin-righT: 1.5em; 
+    }
+
+    @include mq-max ($mobile) {
+        display: block; 
+    }
+ 
+    .heading {
+        font-size: pxToEm(26);
+        font-weight: 300; 
+        text-transform: none; 
+
+        @include mq-min ($desktop-small) {
+            font-size: pxToEm(30);
+        }
+
+        @include mq-max ($tablet) {
+            font-size: pxToEm(22);
+        }
+    }
+
+    p {
+        @include mq-min ($desktop-small) {
+             
+            font-weight: 300; 
+        }
+
+        @include mq-max ($tablet) {
+            font-size: pxToEm(14);
+        }
+    }
+    .col-image {
+        width: 50%; 
+        position: relative; 
+            z-index: 0; 
+        img {
+            display: block; 
+            width: 100%; 
+        }
+
+        @include mq-max ($tablet) {
+            width: 70%; 
+        }
+
+        @include mq-max ($mobile) {
+            width: auto; 
+            margin-left:0; 
+        }
+    }
+
+    .col-content { 
+        padding: 2em;
+        background-color: rgba(0,0,0,0.8);
+        color: $white;
+        width: 65%; 
+        margin-left: -15%;  
+        position: relative; 
+            z-index: 2; 
+        @include mq-max ($mobile) {
+            width: auto; 
+            margin-left:0; 
+            margin-top: -5em; 
+            padding: 1.5em;
+        }
+    }
+}
+
+.two-cols-image-content-2 {
+    flex-direction: row-reverse; 
+
+    .col-content {
+        margin-left:0; 
+        margin-right: -15%; 
+
+        @include mq-max ($mobile) {
+            width: auto; 
+            margin-right:0; 
+        }
+    }
+}
+
+.pdfobject-container {
+    height: 45vh; 
+}
+
+.pdf-viewer {
+    .hd {
+        margin-bottom: 0; 
+    }
+
+    .pdf-viewer-container {
+        padding: .35em; 
+        
+        background-color: #efefef; 
+    }
+}
+
+
+.gridboxes {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+
+    .gridbox {
+        padding: 2em; 
+        border:1px solid #efefef; 
+        width: auto;
+        &:not(:first-child) {
+            border-top: none; 
+        }
+        @include mq-min($tablet) {
+            
+            width: 50%; 
+            &:nth-child(2n+0) {
+                border-left: 0; 
+            }
+
+            &:not(:first-child) {
+                border-top: 1px solid #efefef; 
+            }
+        }
+    }
+}

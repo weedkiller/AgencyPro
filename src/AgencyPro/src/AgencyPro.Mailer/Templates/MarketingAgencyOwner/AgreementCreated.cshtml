@@ -1,0 +1,38 @@
+﻿@using IdeaFortune.Mailer
+@using IdeaFortune.Mailer.TagHelpers
+@model IdeaFortune.Core.Agreements.Emails.MarketingAgencyAgreementEmail
+@{
+    Layout = null;
+}
+
+<div>
+    @Model.Introduction()
+    
+    <p>
+        Good news!  @Model.ProviderOrganizationName would like to engage your marketing services.
+    </p>
+    
+    <table>
+        <caption>Agreement Details</caption>
+        <tr>
+            <th style="text-align: left">
+                Marketing Stream
+            </th>
+            <td>
+                @Model.MarketingStream.ToString("C")
+            </td>
+        </tr>
+        <tr>
+            <th style="text-align: left">
+                Marketing Bonus
+            </th>
+            <td>
+                @Model.MarketerBonus.ToString("C")
+            </td>
+        </tr>
+    </table>
+
+    @Model.Footer(SectionType.MarketingAgencyOwner, Model.MarketingOrganizationName)
+
+</div>
+

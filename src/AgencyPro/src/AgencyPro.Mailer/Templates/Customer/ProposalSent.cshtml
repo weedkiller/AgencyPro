@@ -1,0 +1,13 @@
+﻿@using IdeaFortune.Mailer
+@using IdeaFortune.Mailer.TagHelpers
+@model IdeaFortune.Core.Proposals.Emails.CustomerProposalEmail
+@{
+    Layout = null;
+}
+
+<div>
+    @Model.Introduction()
+    @Model.ProposalSent(Model)
+    @Model.Footer(SectionType.Customer, Model.CustomerOrganizationName)
+
+</div>

@@ -1,0 +1,12 @@
+﻿@using IdeaFortune.Mailer
+@using IdeaFortune.Mailer.TagHelpers
+@model IdeaFortune.Core.Stories.Emails.AccountManagerStoryEmail
+@{
+    Layout = null;
+}
+
+<div>
+    @Model.Introduction()
+    @Model.StoryAssigned(Model)
+    @Model.Footer(SectionType.AccountManager, Model.ProviderOrganizationName)
+</div>

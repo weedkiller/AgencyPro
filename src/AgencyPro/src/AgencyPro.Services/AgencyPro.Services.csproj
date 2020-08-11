@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <LangVersion>7.3</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="identityserver4" Version="2.4.0" />
+    <PackageReference Include="itextsharp.lgplv2.core" Version="1.6.2" />
+    <PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="2.2.0" />
+    <PackageReference Include="Sendgrid" Version="9.11.0" />
+    <PackageReference Include="stripe.net" Version="34.5.0" />
+    <PackageReference Include="windowsazure.storage" Version="9.3.3" />
+
+
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Filter" Version="1.1.2" />
+    <PackageReference Include="Microsoft.Extensions.Logging.TraceSource" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="2.2.0" />
+    <PackageReference Include="System.Diagnostics.StackTrace" Version="4.3.0" />
+    <PackageReference Include="System.Linq.Queryable" Version="4.3.0" />
+
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="FinancialInfo\NewFolder\" />
+    <Folder Include="Geo\" />
+    <Folder Include="BalanceTransactions\" />
+    <Folder Include="OrganizationRoles\Exceptions\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AgencyPro.Data\AgencyPro.Data.csproj" />
+  </ItemGroup>
+
+
+</Project>

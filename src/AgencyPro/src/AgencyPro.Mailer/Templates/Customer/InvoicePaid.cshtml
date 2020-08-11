@@ -1,0 +1,13 @@
+﻿@using IdeaFortune.Mailer
+@using IdeaFortune.Mailer.TagHelpers
+@model IdeaFortune.Core.Invoices.Emails.CustomerInvoiceEmail
+@{
+    Layout = null;
+}
+
+<div>
+    @Model.Introduction()
+    @Model.InvoicePaid( Model)
+    @Model.Footer(SectionType.Customer, Model.CustomerOrganizationName)
+
+</div>

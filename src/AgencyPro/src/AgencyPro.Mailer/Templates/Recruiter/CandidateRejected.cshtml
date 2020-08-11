@@ -1,0 +1,14 @@
+﻿@using IdeaFortune.Mailer
+@using IdeaFortune.Mailer.TagHelpers
+@model IdeaFortune.Core.Candidates.Emails.RecruiterCandidateEmail
+@{
+    Layout = null;
+}
+
+<div>
+    @Model.Introduction()
+    @Model.CandidateRejected( Model)
+    @Model.Footer(SectionType.Recruiter, Model.RecruiterOrganizationName)
+
+</div>
+

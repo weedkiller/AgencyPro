@@ -1,0 +1,196 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AgencyPro.Contractor.API</name>
+    </assembly>
+    <members>
+        <member name="M:AgencyPro.Contractor.API.Controllers.v2.ContractController.GetContracts(System.Guid,AgencyPro.Core.Contracts.Filters.ContractFilters)">
+            <summary>
+                Contractor can get their contracts
+            </summary>
+            <param name="organizationId">the organization id</param>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Contractor.API.Controllers.v2.ContractController.GetContract(System.Guid,System.Guid)">
+            <summary>
+                Get contract
+            </summary>
+            <param name="organizationId">the organization id</param>
+            <param name="contractId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Contractor.API.Controllers.v2.ContractController.UpdateContract(System.Guid,System.Guid,AgencyPro.Core.Contracts.ViewModels.UpdateProviderContractInput)">
+            <summary>
+                Updates a contract details
+            </summary>
+            <param name="organizationId"></param>
+            <param name="contractId"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Contractor.API.Controllers.v2.ContractController.Pause(System.Guid,System.Guid)">
+            <summary>
+                Pauses a contract 
+            </summary>
+            <param name="organizationId"></param>
+            <param name="contractId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Contractor.API.Controllers.v2.ContractController.End(System.Guid,System.Guid)">
+            <summary>
+                ends a contract 
+            </summary>
+            <param name="organizationId"></param>
+            <param name="contractId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Contractor.API.Controllers.v2.ContractController.Restart(System.Guid,System.Guid)">
+            <summary>
+                restarts a contract 
+            </summary>
+            <param name="organizationId"></param>
+            <param name="contractId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Contractor.API.Controllers.v2.ContractController.AddComment(System.Guid,System.Guid,AgencyPro.Core.Comments.ViewModels.CommentInput)">
+            <summary>
+            Add comment to a contract
+            </summary>
+            <param name="organizationId"></param>
+            <param name="contractId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Contractor.API.Controllers.v2.OrganizationController.GetOrganizationInfo(System.Guid)">
+            <summary>
+            get org info from co perspective
+            </summary>
+            <param name="organizationId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Contractor.API.Controllers.v2.OrganizationController.GetCounts(System.Guid)">
+            <summary>
+            get counts of objects for organization account manager
+            </summary>
+            <param name="organizationId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Contractor.API.Controllers.v2.ProjectController.GetProjects(System.Guid,AgencyPro.Core.Projects.Filters.ProjectFilters)">
+            <summary>
+                Gets all projects for the current contractor in an organization
+            </summary>
+            <param name="organizationId">the organization id</param>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Contractor.API.Controllers.v2.ProjectController.AddComment(System.Guid,System.Guid,AgencyPro.Core.Comments.ViewModels.CommentInput)">
+            <summary>
+            Add comment to a project
+            </summary>
+            <param name="organizationId"></param>
+            <param name="projectId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Contractor.API.Controllers.v2.StoryController.GetById(System.Guid,System.Guid)">
+            <summary>
+                gets a specific story
+            </summary>
+            <param name="organizationId"></param>
+            <param name="storyId">the story id</param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Contractor.API.Controllers.v2.StoryController.GetAssignedStories(System.Guid,AgencyPro.Core.Stories.Filters.StoryFilters)">
+            <summary>
+                Gets stories
+            </summary>
+            <param name="organizationId">the organization id</param>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Contractor.API.Controllers.v2.StoryController.AddComment(System.Guid,System.Guid,AgencyPro.Core.Comments.ViewModels.CommentInput)">
+            <summary>
+            Add comment to a story
+            </summary>
+            <param name="organizationId"></param>
+            <param name="storyId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Contractor.API.Controllers.v2.TimeController.TrackHours(System.Guid,AgencyPro.Core.TimeEntries.ViewModels.TimeTrackingModel)">
+            <summary>
+                Track time
+            </summary>
+            <param name="organizationId">the organization id</param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Contractor.API.Controllers.v2.TimeController.TrackDay(System.Guid,AgencyPro.Core.TimeEntries.ViewModels.DayTimeTrackingModel)">
+            <summary>
+                Tracks a full day (8 hours)
+            </summary>
+            <param name="organizationId">the organization id</param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Contractor.API.Controllers.v2.TimeController.TrackHalfDay(System.Guid,AgencyPro.Core.TimeEntries.ViewModels.DayTimeTrackingModel)">
+            <summary>
+                Tracks a half day (4 hours)
+            </summary>
+            <param name="organizationId"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Contractor.API.Controllers.v2.TimeController.Get(System.Guid,AgencyPro.Core.TimeEntries.ViewModels.TimeMatrixFilters)">
+            <summary>
+                Gets a searchable matrix of time segments
+            </summary>
+            <param name="organizationId"></param>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Contractor.API.Controllers.v2.TimeController.GetCharts(System.Guid,AgencyPro.Core.TimeEntries.ViewModels.TimeMatrixFilters,AgencyPro.Core.Chart.ChartParams)">
+            <summary>
+            Gets chart from contractor perspective
+            </summary>
+            <param name="organizationId"></param>
+            <param name="filters"></param>
+            <param name="chartParams"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Contractor.API.Controllers.v2.TimeController.GetEntries(System.Guid,AgencyPro.Core.TimeEntries.ViewModels.TimeMatrixFilters)">
+            <summary>
+                Gets time entries from contractor perspective
+            </summary>
+            <param name="organizationId">the organization id</param>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Contractor.API.Controllers.v2.TimeController.GetEntry(System.Guid,System.Guid)">
+            <summary>
+            get entry
+            </summary>
+            <param name="organizationId"></param>
+            <param name="entryId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Contractor.API.Controllers.v2.TimeController.UpdateEntry(System.Guid,System.Guid,AgencyPro.Core.TimeEntries.ViewModels.TimeEntryInput)">
+            <summary>
+            updates a time entry
+            </summary>
+            <param name="organizationId"></param>
+            <param name="entryId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Contractor.API.Controllers.v2.TimeController.DeleteEntry(System.Guid,System.Guid)">
+            <summary>
+            delete a time entry
+            </summary>
+            <param name="organizationId"></param>
+            <param name="entryId"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

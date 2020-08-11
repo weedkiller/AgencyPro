@@ -1,0 +1,362 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AgencyPro.Customer.API</name>
+    </assembly>
+    <members>
+        <member name="M:AgencyPro.Customer.API.Controllers.v2.AgencyController.CreateAgency(System.String,AgencyPro.Core.Organizations.ViewModels.OrganizationCreateInput)">
+            <summary>
+            Creates a new agency
+            </summary>
+            <param name="version"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Customer.API.Controllers.v2.BalanceController.Balance(System.Guid)">
+            <summary>
+            Get customer balance
+            </summary>
+            <param name="organizationId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Customer.API.Controllers.v2.BuyerAccountController.GetStripeUrl(System.Guid)">
+            <summary>
+            gets the stripe url to login to express dashboard
+            </summary>
+            <param name="organizationId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Customer.API.Controllers.v2.BuyerAccountController.GetBuyerAccount(System.Guid)">
+            <summary>
+            Get buyer accounts for an organization
+            </summary>
+            <param name="organizationId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Customer.API.Controllers.v2.BuyerAccountController.GetAuthUrl(System.Guid)">
+            <summary>
+                Get the stripe auth url for the current customer
+            </summary>
+            <param name="organizationId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Customer.API.Controllers.v2.CardController.GetCards(System.Guid)">
+            <summary>
+            gets the cards for the organization customer account
+            </summary>
+            <param name="organizationId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Customer.API.Controllers.v2.ContractController.GetContractsForCustomer(System.Guid,AgencyPro.Core.Contracts.Filters.ContractFilters)">
+            <summary>
+                Get all the customer's contracts within an organization
+            </summary>
+            <param name="organizationId">the organization id</param>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Customer.API.Controllers.v2.ContractController.GetContract(System.Guid,System.Guid)">
+            <summary>
+                Get contract
+            </summary>
+            <param name="organizationId">the organization id</param>
+            <param name="contractId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Customer.API.Controllers.v2.ContractController.UpdateContract(System.Guid,System.Guid,AgencyPro.Core.Contracts.ViewModels.UpdateBuyerContractInput)">
+            <summary>
+                Updates a contract details
+            </summary>
+            <param name="organizationId"></param>
+            <param name="contractId"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Customer.API.Controllers.v2.ContractController.Pause(System.Guid,System.Guid)">
+            <summary>
+                Pauses a contract 
+            </summary>
+            <param name="organizationId"></param>
+            <param name="contractId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Customer.API.Controllers.v2.ContractController.End(System.Guid,System.Guid)">
+            <summary>
+                ends a contract
+            </summary>
+            <param name="organizationId"></param>
+            <param name="contractId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Customer.API.Controllers.v2.ContractController.Restart(System.Guid,System.Guid)">
+            <summary>
+                restarts a contract
+            </summary>
+            <param name="organizationId"></param>
+            <param name="contractId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Customer.API.Controllers.v2.ContractController.AddComment(System.Guid,System.Guid,AgencyPro.Core.Comments.ViewModels.CommentInput)">
+            <summary>
+            Add comment to a contract
+            </summary>
+            <param name="organizationId"></param>
+            <param name="contractId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Customer.API.Controllers.v2.CustomerAccountController.GetAccounts(System.Guid,AgencyPro.Core.Common.CommonFilters)">
+            <summary>
+                Get all accounts for the current customers
+            </summary>
+            <param name="organizationId">the organization id</param>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Customer.API.Controllers.v2.CustomerAccountController.GetAccount(System.Guid,System.Int32)">
+            <summary>
+                Get acct for the current account manager
+            </summary>
+            <param name="organizationId"></param>
+            <param name="accountId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Customer.API.Controllers.v2.CustomerAccountController.JoinProviderOrganization(System.Guid,AgencyPro.Core.CustomerAccounts.ViewModels.JoinAsCustomerInput)">
+            <summary>
+            Create account at a provider organization 
+            </summary>
+            <param name="organizationId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Customer.API.Controllers.v2.CustomerAccountController.CreateComment(System.Guid,System.Int32,AgencyPro.Core.Comments.ViewModels.CommentInput)">
+            <summary>
+            Create a comment for the account
+            </summary>
+            <param name="organizationId"></param>
+            <param name="number"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Customer.API.Controllers.v2.InvoiceController.GetInvoice(System.Guid,System.String)">
+            <summary>
+                Get the invoice by id
+            </summary>
+            <param name="organizationId"></param>
+            <param name="invoiceId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Customer.API.Controllers.v2.InvoiceController.GetInvoices(System.Guid,AgencyPro.Core.Invoices.Filters.InvoiceFilters)">
+            <summary>
+                Gets invoices
+            </summary>
+            <param name="organizationId"></param>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Customer.API.Controllers.v2.OrganizationController.GetOrganization(System.Guid)">
+            <summary>
+                Gets an organization
+            </summary>
+            <param name="organizationId">The Organization ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Customer.API.Controllers.v2.OrganizationController.GetProviderOrganizationList(System.Guid,AgencyPro.Core.Organizations.OrganizationFilters)">
+            <summary>
+            Gets the list of providers that allow customers to create an account
+            </summary>
+            <param name="organizationId"></param>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Customer.API.Controllers.v2.OrganizationController.GetProviderOrganizationSummary(System.Guid,AgencyPro.Core.Organizations.OrganizationFilters)">
+            <summary>
+            Provider org summary 
+            </summary>
+            <param name="organizationId"></param>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Customer.API.Controllers.v2.OrganizationController.UpgradeOrganization(System.Guid,AgencyPro.Core.Organizations.ViewModels.OrganizationUpgradeInput)">
+            <summary>
+                Upgrades an organization
+            </summary>
+            <param name="organizationId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Customer.API.Controllers.v2.OrganizationController.UpdateOrganization(System.Guid,AgencyPro.Core.Organizations.ViewModels.OrganizationUpdateInput)">
+            <summary>
+            updates an organization
+            </summary>
+            <param name="organizationId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Customer.API.Controllers.v2.OrganizationController.UpdateOrganizationPic(System.Guid,Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+                Updates an organization logo (200x200px is best)
+            </summary>
+            <param name="organizationId"></param>
+            <param name="logo">The logo to upload</param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Customer.API.Controllers.v2.ProjectController.GetProjectsForCustomer(System.Guid,System.Guid,AgencyPro.Core.Projects.Filters.ProjectFilters)">
+            <summary>
+                Gets all the customer's projects within an organization
+            </summary>
+            <param name="organizationId">the organization id</param>
+            <param name="customerId">the customer id</param>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Customer.API.Controllers.v2.ProjectController.PauseProject(System.Guid,System.Guid)">
+            <summary>
+                Pause a project
+            </summary>
+            <param name="organizationId">the organization id</param>
+            <param name="projectId">the project id</param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Customer.API.Controllers.v2.ProjectController.GetProject(System.Guid,System.Guid)">
+            <summary>
+                get project
+            </summary>
+            <param name="organizationId"></param>
+            <param name="projectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Customer.API.Controllers.v2.ProjectController.AddComment(System.Guid,System.Guid,AgencyPro.Core.Comments.ViewModels.CommentInput)">
+            <summary>
+            Add comment to a project
+            </summary>
+            <param name="organizationId"></param>
+            <param name="projectId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Customer.API.Controllers.v2.ProjectController.EndProject(System.Guid,System.Guid)">
+            <summary>
+            Ends the project
+            </summary>
+            <param name="organizationId"></param>
+            <param name="projectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Customer.API.Controllers.v2.ProposalController.GetProposals(System.Guid,AgencyPro.Core.Proposals.Filters.ProposalFilters)">
+            <summary>
+                get all proposals
+            </summary>
+            <param name="organizationId"></param>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Customer.API.Controllers.v2.ProposalController.GetProposal(System.Guid,System.Guid)">
+            <summary>
+                gets proposal by id
+            </summary>
+            <param name="organizationId"></param>
+            <param name="proposalId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Customer.API.Controllers.v2.ProposalController.GetProposalPdf(System.Guid,System.Guid)">
+            <summary>
+                download proposal pdf
+            </summary>
+            <param name="organizationId"></param>
+            <param name="proposalId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Customer.API.Controllers.v2.ProposalController.AcceptProposal(System.Guid,System.Guid)">
+            <summary>
+                accept proposal by id
+            </summary>
+            <param name="organizationId"></param>
+            <param name="proposalId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Customer.API.Controllers.v2.ProposalController.RejectProposal(System.Guid,System.Guid,AgencyPro.Core.Proposals.ViewModels.ProposalRejectionInput)">
+            <summary>
+                reject proposal by id
+            </summary>
+            <param name="organizationId"></param>
+            <param name="proposalId"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Customer.API.Controllers.v2.RetainerController.GetRetainer(System.Guid,System.Guid)">
+            <summary>
+            Gets retainer information
+            </summary>
+            <param name="organizationId"></param>
+            <param name="projectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Customer.API.Controllers.v2.StoryController.GetStories(System.Guid,AgencyPro.Core.Stories.Filters.StoryFilters)">
+            <summary>
+                Gets stories
+            </summary>
+            <param name="organizationId">the organization id</param>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Customer.API.Controllers.v2.TimeController.Get(System.Guid,AgencyPro.Core.TimeEntries.ViewModels.TimeMatrixFilters)">
+            <summary>
+                Gets a searchable matrix of time segments
+            </summary>
+            <param name="organizationId"></param>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Customer.API.Controllers.v2.TimeController.GetCharts(System.Guid,AgencyPro.Core.TimeEntries.ViewModels.TimeMatrixFilters,AgencyPro.Core.Chart.ChartParams)">
+            <summary>
+                
+            </summary>
+            <param name="organizationId"></param>
+            <param name="filters"></param>
+            <param name="chartParams"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Customer.API.Controllers.v2.WorkOrderController.GetWorkOrders(System.Guid,AgencyPro.Core.Orders.WorkOrderFilters)">
+            <summary>
+             get's all work orders submitted by customer
+            </summary>
+            <param name="organizationId"></param>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Customer.API.Controllers.v2.WorkOrderController.UpdateWorkOrder(System.Guid,System.Guid,AgencyPro.Core.Orders.ViewModels.UpdateWorkOrderInput)">
+            <summary>
+            Update work order
+            </summary>
+            <param name="organizationId"></param>
+            <param name="workOrderId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Customer.API.Controllers.v2.WorkOrderController.CreateWorkOrder(System.Guid,AgencyPro.Core.Orders.ViewModels.WorkOrderInput)">
+            <summary>
+            create a work order
+            </summary>
+            <param name="organizationId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Customer.API.Controllers.v2.WorkOrderController.GetWorkOrders(System.Guid,System.Guid)">
+            <summary>
+            Gets work order by id
+            </summary>
+            <param name="organizationId"></param>
+            <param name="workOrderId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AgencyPro.Customer.API.Controllers.v2.WorkOrderController.RevokeWorkOrder(System.Guid,System.Guid)">
+            <summary>
+            revoke work order that has already been sent
+            </summary>
+            <param name="organizationId"></param>
+            <param name="workOrderId"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

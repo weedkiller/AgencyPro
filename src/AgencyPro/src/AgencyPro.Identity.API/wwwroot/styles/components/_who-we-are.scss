@@ -1,0 +1,209 @@
+
+
+.section-who-we-are {
+  display: flex; 
+  height: 90vh; 
+  background: #fff url('../images/bg-who-we-are.jpg') no-repeat;
+  background-position: top left; 
+  background-size: auto 100%; 
+  margin-top: -1px; 
+  
+
+  @include mq-max ($tablet-start) {
+    height: auto;
+    background-position: center center; 
+    flex-direction: column-reverse;
+  }
+
+  .left-side {
+    width: 35%;
+    text-align: center; 
+    display: flex; 
+    align-items: center; 
+
+    @include mq-max ($tablet-start) {
+      height: 30vh;
+      width: 100%; 
+      padding-top: 2em; 
+      padding-bottom: 2em; 
+    }
+  }
+
+  .right-side {
+    width: 65%; 
+    background-color: #131313; 
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 100%);
+    display: flex; 
+    color: $white; 
+
+    @include mq-max ($tablet-start) {
+      width: 100%; 
+      display: block; 
+      clip-path: none; 
+      padding-bottom: 5em; 
+    }
+    .top-part,
+    .middle-part,
+    .bottom-part {
+      width: 100%; 
+      padding-left: 240px; 
+
+      @include mq-min ($desktop-small) {
+        padding-left: 300px; 
+      }
+
+      @include mq-max ($mobile) {
+        padding-left: 1.5em; 
+      }
+    }
+
+    .middle-part,
+    .bottom-part {
+      @include mq-max ($desktop-small) {
+        padding-left: 120px; 
+      }
+
+      @include mq-max ($mobile) {
+        padding-left: 1.5em; 
+      }
+    }
+     
+
+    .top-part { 
+      height: 35%;
+      background: url('../images/if-logo-dots.svg') no-repeat;
+      background-size: 550px;
+      padding-top: 140px; 
+      background-position: -00px -30px;
+
+      @include mq-max ($tablet-start) {
+        margin-bottom: 3em; 
+        background-position: -70px -30px;
+      }
+
+      @include mq-max ($mobile) {
+        background-size: 450px;
+        background-position: -50px 0px;
+        padding-top: 240px; 
+      }
+
+      h4 {
+        font-size: pxToEm(20);
+        font-weight: 300; 
+        opacity: 0.7;
+        @include mq-min ($desktop-small) {
+          font-size: pxToEm(24);
+        }
+      } 
+
+      h3 {
+        font-size: pxToEm(34);
+        font-weight: 500; 
+        color: $white; 
+        line-height: 1em; 
+        text-transform: uppercase; 
+        @include mq-min ($desktop-small) {
+          font-size: pxToEm(44);
+        }
+      }
+     }
+
+    .bottom-part { 
+      width: 100%; height: 35%; 
+      padding-right: 50px; 
+    } 
+
+    .middle-part { 
+      padding-right: 50px; 
+      flex-grow: 1;
+      color:$white;
+      position: relative;
+      display: flex; 
+      align-items: center; 
+      &-wrapper {
+        
+      }
+      p {
+        font-weight: 300;
+        line-height: 1.5em; 
+        font-size: pxToEm(18);
+        max-width: 600px;
+        @include mq-min ($desktop-small) {
+          font-size: pxToEm(22);
+        }
+      }
+
+      .button {
+        margin-top: 1.5em; 
+      }
+
+      .diagonal-shape {
+        position: absolute; 
+        right: -100px; 
+        bottom: 0; 
+
+        @include mq-max ($tablet-start) {
+          display: none; 
+        }
+
+      }
+    }
+
+    .lets-have-chat {
+      font-size: pxToEm(22);
+      font-weight: 300; 
+      margin-top: 2em; 
+      max-width: 600px;
+
+      @include mq-min ($desktop-small) {
+        font-size: pxToEm(28);
+      }
+
+      a {
+        font-weight: 400; 
+        display: inline-block; 
+        font-size: pxToEm(30, 22);
+        text-decoration: underline; 
+        &:hover {
+          color: $white; 
+        }
+
+        @include mq-min ($desktop-small) {
+          font-size: pxToEm(38, 28);
+        }
+      }
+    }
+
+  }
+
+  .right-side-wrapper {
+    display: flex; 
+    align-items: center; 
+    flex-direction: column;
+    width: 100%; 
+  }
+
+  .intro-video {
+    max-width: 150px; 
+    display: block; 
+    text-align: center; 
+    margin: 0 auto; 
+    @extend %link-darkgray; 
+
+    &:hover {
+      img {
+        opacity: .9;
+      }
+    }
+    img {
+      opacity: 0.5; 
+      width: 100px; 
+      transition: all 0.3s ease 0s;
+    }
+
+    span {
+      font-size: pxToEm(22);
+      font-weight: 300; 
+    }
+  }
+}

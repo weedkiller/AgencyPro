@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AgencyPro.Agency.API</name>
+    </assembly>
+    <members>
+        <member name="M:AgencyPro.Agency.API.Controllers.LeadController.CreateLead(System.Guid,System.String,AgencyPro.Core.Leads.ViewModels.LeadInput)">
+            <summary>
+            Submit a lead to an organization with referral code
+            </summary>
+            <param name="organizationId"></param>
+            <param name="referralCode"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

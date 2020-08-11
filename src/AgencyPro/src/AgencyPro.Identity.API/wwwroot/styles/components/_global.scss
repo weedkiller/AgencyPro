@@ -1,0 +1,113 @@
+.btn-hero { 
+  background-color: $red;
+  position: relative; 
+  padding-top: 1.25em;
+  padding-bottom: 1.25em; 
+  padding-right: 4em;  
+  border-radius: 6px; 
+  padding-left: 6em;
+  color: $white; 
+  display: inline-block; 
+  text-align: left; 
+  transition: all .5s;
+  &:hover {
+    color: $white; 
+    background-color: $reddark; 
+  }
+  em {
+    img {
+      width: 44px; height: auto; 
+    }
+    width: 44px + 26px; 
+    position: absolute; 
+    top: 50%; 
+    left: 30px; 
+    transform: translateY(-45%);
+  }
+
+  .btn-hero-main,
+  .btn-hero-sub { 
+    display: block; 
+  }
+
+  .btn-hero-main {
+    font-size: 1.5em; 
+    line-height: 1.25em; 
+    @include mq-max ($tablet) {
+      font-size: 1.25em;
+    }
+  }
+
+  .btn-hero-sub {
+    font-size: 1em; 
+    font-weight: 300; 
+    @include mq-max ($tablet) {
+      font-size: 0.875em;
+    }
+  }
+
+  .arrow-pointer {
+    position: absolute; 
+    width: 32px; height: auto;
+    transform: rotate(45deg);
+    top: -0.5em; 
+    right: 1em; 
+  }
+}
+
+
+.btn-height-auto {
+  height: auto; 
+}
+
+
+
+%link-darkgray {
+  color: $darkgray;
+  &:hover {
+    color: $red; 
+  }
+}
+
+
+.button {
+  &.is-outlined {
+    &.is-white {
+      border-color: $white;
+      color: $white; 
+      transition: all .5s ease; 
+      &:hover {
+        border-color: $white;
+        background-color: $white; 
+        color: $darkgray; 
+      }
+    }
+  }
+}
+
+
+.button-hover {
+  transition: all 0.3s ease 0s;
+}
+
+
+.section-spaced {
+  margin-left: 1.5em;
+  margin-right: 1.5em; 
+}
+
+.social-networks {
+  > a { 
+    display: inline-block;
+    width: 32px; height: 32px; 
+    margin: 0 .25em; 
+    opacity: 0.85; 
+    transition: all 0.3s ease 0s;
+    &:hover {
+      opacity: 1; 
+    }
+  } 
+}
+
+
+ 

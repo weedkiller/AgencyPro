@@ -1,0 +1,51 @@
+@model AgencyPro.Core.People.ViewModels.PersonOutput
+
+<main class="two-cols-nav">
+        <partial name="_SideNav" />
+    <div class="right-col is-flex">
+
+        <div class="box has-gap-left has-gap-right is-borderless is-shadowless">
+            <div class="page-heading">
+                <h1 class="page-title">Update your profile</h1>
+            </div>
+            <partial name="_ValidationSummary" />
+            <form method="post" enctype="multipart/form-data" asp-controller="Profile" asp-action="Index">
+                <input type="hidden" name="ImageUrl" value="@Model.ImageUrl" />
+                <input type="hidden" asp-for="Id" />
+                <div class="field">
+                    <img src="@Model.ImageUrl" style="width:150px;height:150px" />
+                    <label class="label">Profile Image</label>
+                    <div class="control has-icons-left">
+                        <input type="file" id="ProfileImage" name="ProfileImage">
+                    </div>
+                </div>
+                <div class="field">
+                    <label asp-for="FirstName" class="label">First Name</label>
+                    <div class="control has-icons-left">
+                        <input class="input validate" asp-for="FirstName" placeholder="FirstName" autofocus="" type="text"
+                               id="FirstName" name="FirstName">
+                        <span class="icon is-small is-left">
+                            <i class="fa fa-envelope"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="field">
+                    <label asp-for="LastName" class="label">Last Name</label>
+                    <div class="control has-icons-left">
+                        <input class="input validate" asp-for="LastName" placeholder="LastName" autofocus="" type="text"
+                               id="LastName" name="LastName">
+                        <span class="icon is-small is-left">
+                            <i class="fa fa-envelope"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <button class="button is-primary is-fullwidth" name="button" value="save">Save</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</main>
+
