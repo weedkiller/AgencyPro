@@ -27,7 +27,7 @@ namespace AgencyPro.AccountManager.API.Controllers.v2
         }
 
         /// <summary>
-        ///    Get account managers within an organization
+        ///    Gets all account managers in an organization
         /// </summary>
         /// <param name="organizationId"></param>
         /// <param name="filters"></param>
@@ -44,7 +44,7 @@ namespace AgencyPro.AccountManager.API.Controllers.v2
         }
 
         /// <summary>
-        ///    Get account managers within an organization
+        ///    Gets all account managers in an organization
         /// </summary>
         /// <param name="organizationId"></param>
         /// <param name="filters"></param>
@@ -62,7 +62,7 @@ namespace AgencyPro.AccountManager.API.Controllers.v2
         }
 
         /// <summary>
-        ///    Get a specific account manager details
+        ///    Gets a specific account manager in an organization
         /// </summary>
         /// <param name="organizationId"></param>
         /// <param name="personId"></param>
@@ -79,7 +79,7 @@ namespace AgencyPro.AccountManager.API.Controllers.v2
         }
 
         /// <summary>
-        /// 
+        ///     Gets statistics about a specific account manager in an organization
         /// </summary>
         /// <param name="organizationId"></param>
         /// <param name="personId"></param>

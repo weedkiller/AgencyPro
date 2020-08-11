@@ -32,7 +32,7 @@ namespace AgencyPro.AccountManager.API.Controllers.v2
         }
 
         /// <summary>
-        ///     Get contracts for currently logged in account manager
+        ///     Get contracts that belong to account manager
         /// </summary>
         /// <param name="organizationId">the organization id</param>
         /// <param name="filters"></param>
@@ -48,7 +48,7 @@ namespace AgencyPro.AccountManager.API.Controllers.v2
         }
 
         /// <summary>
-        ///     Get contract
+        ///     Get specific contract that belongs to account manager
         /// </summary>
         /// <param name="organizationId">the organization id</param>
         /// <param name="contractId"></param>
@@ -129,7 +129,7 @@ namespace AgencyPro.AccountManager.API.Controllers.v2
         }
 
         /// <summary>
-        ///     ends a contract 
+        ///     Ends a contract 
         /// </summary>
         /// <param name="organizationId"></param>
         /// <param name="contractId"></param>
@@ -153,7 +153,7 @@ namespace AgencyPro.AccountManager.API.Controllers.v2
         }
 
         /// <summary>
-        ///     restarts a contract 
+        ///    Restarts a contract 
         /// </summary>
         /// <param name="organizationId"></param>
         /// <param name="contractId"></param>
@@ -174,10 +174,9 @@ namespace AgencyPro.AccountManager.API.Controllers.v2
 
             return BadRequest();
         }
-
-
+        
         /// <summary>
-        /// Add comment to a contract
+        ///     Adds a comment to a contract
         /// </summary>
         /// <param name="organizationId"></param>
         /// <param name="contractId"></param>

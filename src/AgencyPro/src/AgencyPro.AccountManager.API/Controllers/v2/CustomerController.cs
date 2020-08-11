@@ -26,7 +26,7 @@ namespace AgencyPro.AccountManager.API.Controllers.v2
         }
 
         /// <summary>
-        /// Get list of customers
+        ///     Gets all customers that belong to account manager
         /// </summary>
         /// <param name="organizationId"></param>
         /// <returns></returns>

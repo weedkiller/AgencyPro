@@ -28,7 +28,7 @@ namespace AgencyPro.AgencyOwner.API.Controllers.v2
         }
 
         /// <summary>
-        /// removes a person from the contractor role within an organization
+        ///     Removes a person from the contractor role in an organization
         /// </summary>
         /// <param name="organizationId"></param>
         /// <param name="personId"></param>
@@ -47,7 +47,7 @@ namespace AgencyPro.AgencyOwner.API.Controllers.v2
         }
 
         /// <summary>
-        /// gets contractors within an organization
+        ///    Gets contractors in an organization
         /// </summary>
         /// <param name="organizationId"></param>
         /// <param name="filters"></param>
@@ -64,7 +64,7 @@ namespace AgencyPro.AgencyOwner.API.Controllers.v2
         }
 
         /// <summary>
-        /// gets contractors within an organization
+        ///     Gets contractors in an organization
         /// </summary>
         /// <param name="organizationId"></param>
         /// <param name="filters"></param>
@@ -82,7 +82,7 @@ namespace AgencyPro.AgencyOwner.API.Controllers.v2
         }
 
         /// <summary>
-        /// Gets contractor record within an organization
+        ///     Gets specific contractor in an organization
         /// </summary>
         /// <param name="organizationId"></param>
         /// <param name="personId"></param>
@@ -100,7 +100,7 @@ namespace AgencyPro.AgencyOwner.API.Controllers.v2
         }
 
         /// <summary>
-        /// update a contractor within an organization
+        ///     Updates a contractor in an organization
         /// </summary>
         /// <param name="organizationId"></param>
         /// <param name="personId"></param>
@@ -118,7 +118,7 @@ namespace AgencyPro.AgencyOwner.API.Controllers.v2
         }
 
         /// <summary>
-        /// update a contractor within an organization
+        ///     Updates a contractor in an organization
         /// </summary>
         /// <param name="organizationId"></param>
         /// <param name="personId"></param>
@@ -136,14 +136,13 @@ namespace AgencyPro.AgencyOwner.API.Controllers.v2
         }
 
         /// <summary>
-        /// adds an existing contractor to an organization
+        ///     Adds an existing contractor to an organization
         /// </summary>
         /// <param name="organizationId"></param>
         /// <param name="personId"></param>
         /// <param name="input"></param>
         /// <returns></returns>
         [HttpPut("{personId}")]
-        
         [ProducesResponseType(typeof(List<AgencyOwnerOrganizationContractorOutput>), StatusCodes.Status200OK)]
         public async Task<IActionResult> AddContractor([FromRoute] Guid organizationId, [FromRoute] Guid personId,
             [FromBody] OrganizationContractorInput input)

@@ -29,7 +29,7 @@ namespace AgencyPro.AccountManager.API.Controllers.v2
 
 
         /// <summary>
-        /// gets contractors within an organization
+        ///     Gets all contractors in an organization
         /// </summary>
         /// <param name="organizationId"></param>
         /// <param name="filters"></param>
@@ -46,7 +46,7 @@ namespace AgencyPro.AccountManager.API.Controllers.v2
         }
 
         /// <summary>
-        /// gets contractors (w/ statistics) within an organization
+        ///     Gets all contractors (w/ statistics) in an organization
         /// </summary>
         /// <param name="organizationId"></param>
         /// <param name="filters"></param>
@@ -64,7 +64,7 @@ namespace AgencyPro.AccountManager.API.Controllers.v2
         }
 
         /// <summary>
-        /// Gets contractor record within an organization
+        ///     Gets specific contractor in an organization
         /// </summary>
         /// <param name="organizationId"></param>
         /// <param name="personId"></param>
@@ -82,7 +82,7 @@ namespace AgencyPro.AccountManager.API.Controllers.v2
         }
 
         /// <summary>
-        /// Get statistics for a person
+        ///     Gets statistics for a person
         /// </summary>
         /// <param name="organizationId"></param>
         /// <param name="personId"></param>

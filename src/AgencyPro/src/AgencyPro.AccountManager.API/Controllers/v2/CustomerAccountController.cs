@@ -51,7 +51,7 @@ namespace AgencyPro.AccountManager.API.Controllers.v2
         }
 
         /// <summary>
-        ///     Get acct for the current account manager
+        ///     Gets specific account for current account manager
         /// </summary>
         /// <param name="organizationId"></param>
         /// <param name="accountId"></param>
@@ -69,7 +69,7 @@ namespace AgencyPro.AccountManager.API.Controllers.v2
         }
 
         /// <summary>
-        ///     Create and return a new account
+        ///     Creates a new account
         /// </summary>
         /// <param name="organizationId"></param>
         /// <param name="model"></param>
@@ -93,7 +93,7 @@ namespace AgencyPro.AccountManager.API.Controllers.v2
         }
 
         /// <summary>
-        /// Creates an internal account (buyer account for the current organization)
+        ///     Creates a new internal account (buyer account for the current organization)
         /// </summary>
         /// <param name="organizationId"></param>
         /// <returns></returns>
@@ -115,7 +115,6 @@ namespace AgencyPro.AccountManager.API.Controllers.v2
         /// <param name="input"></param>
         /// <returns></returns>
         [HttpPost("link")]
-        
         [ProducesResponseType(typeof(CustomerAccountResult), StatusCodes.Status200OK)]
         public async Task<IActionResult> LinkAccount(
             [FromRoute] Guid organizationId,
@@ -126,7 +125,7 @@ namespace AgencyPro.AccountManager.API.Controllers.v2
         }
 
         /// <summary>
-        /// deactivates an account
+        ///     Deactivates an account
         /// </summary>
         /// <param name="organizationId"></param>
         /// <param name="number"></param>
@@ -139,11 +138,10 @@ namespace AgencyPro.AccountManager.API.Controllers.v2
                 .Deactivate(_accountManager, number);
 
             return Ok(account);
-
         }
 
         /// <summary>
-        /// Create a comment for the account
+        ///     Create a comment for the account
         /// </summary>
         /// <param name="organizationId"></param>
         /// <param name="number"></param>
