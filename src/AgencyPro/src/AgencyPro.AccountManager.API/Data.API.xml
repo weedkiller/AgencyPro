@@ -6,7 +6,7 @@
     <members>
         <member name="M:AgencyPro.AccountManager.API.Controllers.v2.AccountManagerController.GetAccountManagerList(System.Guid,AgencyPro.Core.OrganizationPeople.Filters.AccountManagerFilters)">
             <summary>
-               Get account managers within an organization
+               Gets all account managers in an organization
             </summary>
             <param name="organizationId"></param>
             <param name="filters"></param>
@@ -14,7 +14,7 @@
         </member>
         <member name="M:AgencyPro.AccountManager.API.Controllers.v2.AccountManagerController.GetAccountManagerStatistics(System.Guid,AgencyPro.Core.OrganizationPeople.Filters.AccountManagerFilters,AgencyPro.Core.Common.CommonFilters)">
             <summary>
-               Get account managers within an organization
+               Gets all account managers in an organization
             </summary>
             <param name="organizationId"></param>
             <param name="filters"></param>
@@ -23,7 +23,7 @@
         </member>
         <member name="M:AgencyPro.AccountManager.API.Controllers.v2.AccountManagerController.GetAccountManager(System.Guid,System.Guid)">
             <summary>
-               Get a specific account manager details
+               Gets a specific account manager in an organization
             </summary>
             <param name="organizationId"></param>
             <param name="personId"></param>
@@ -31,7 +31,7 @@
         </member>
         <member name="M:AgencyPro.AccountManager.API.Controllers.v2.AccountManagerController.GetAccountManagerStatistics(System.Guid,System.Guid)">
             <summary>
-            
+                Gets statistics about a specific account manager in an organization
             </summary>
             <param name="organizationId"></param>
             <param name="personId"></param>
@@ -39,7 +39,7 @@
         </member>
         <member name="M:AgencyPro.AccountManager.API.Controllers.v2.ContractController.GetContracts(System.Guid,AgencyPro.Core.Contracts.Filters.ContractFilters)">
             <summary>
-                Get contracts for currently logged in account manager
+                Get contracts that belong to account manager
             </summary>
             <param name="organizationId">the organization id</param>
             <param name="filters"></param>
@@ -47,7 +47,7 @@
         </member>
         <member name="M:AgencyPro.AccountManager.API.Controllers.v2.ContractController.GetContract(System.Guid,System.Guid)">
             <summary>
-                Get contract
+                Get specific contract that belongs to account manager
             </summary>
             <param name="organizationId">the organization id</param>
             <param name="contractId"></param>
@@ -80,7 +80,7 @@
         </member>
         <member name="M:AgencyPro.AccountManager.API.Controllers.v2.ContractController.End(System.Guid,System.Guid)">
             <summary>
-                ends a contract 
+                Ends a contract 
             </summary>
             <param name="organizationId"></param>
             <param name="contractId"></param>
@@ -88,7 +88,7 @@
         </member>
         <member name="M:AgencyPro.AccountManager.API.Controllers.v2.ContractController.Restart(System.Guid,System.Guid)">
             <summary>
-                restarts a contract 
+               Restarts a contract 
             </summary>
             <param name="organizationId"></param>
             <param name="contractId"></param>
@@ -96,7 +96,7 @@
         </member>
         <member name="M:AgencyPro.AccountManager.API.Controllers.v2.ContractController.AddComment(System.Guid,System.Guid,AgencyPro.Core.Comments.ViewModels.CommentInput)">
             <summary>
-            Add comment to a contract
+                Adds a comment to a contract
             </summary>
             <param name="organizationId"></param>
             <param name="contractId"></param>
@@ -105,7 +105,7 @@
         </member>
         <member name="M:AgencyPro.AccountManager.API.Controllers.v2.ContractorController.GetContractorList(System.Guid,AgencyPro.Core.OrganizationPeople.Filters.ContractorFilters)">
             <summary>
-            gets contractors within an organization
+                Gets all contractors in an organization
             </summary>
             <param name="organizationId"></param>
             <param name="filters"></param>
@@ -113,7 +113,7 @@
         </member>
         <member name="M:AgencyPro.AccountManager.API.Controllers.v2.ContractorController.GetContractorStatistics(System.Guid,AgencyPro.Core.OrganizationPeople.Filters.ContractorFilters,AgencyPro.Core.Common.CommonFilters)">
             <summary>
-            gets contractors (w/ statistics) within an organization
+                Gets all contractors (w/ statistics) in an organization
             </summary>
             <param name="organizationId"></param>
             <param name="filters"></param>
@@ -122,7 +122,7 @@
         </member>
         <member name="M:AgencyPro.AccountManager.API.Controllers.v2.ContractorController.GetContractor(System.Guid,System.Guid)">
             <summary>
-            Gets contractor record within an organization
+                Gets specific contractor in an organization
             </summary>
             <param name="organizationId"></param>
             <param name="personId"></param>
@@ -130,7 +130,7 @@
         </member>
         <member name="M:AgencyPro.AccountManager.API.Controllers.v2.ContractorController.GetContractorStatistics(System.Guid,System.Guid)">
             <summary>
-            Get statistics for a person
+                Gets statistics for a person
             </summary>
             <param name="organizationId"></param>
             <param name="personId"></param>
@@ -146,7 +146,7 @@
         </member>
         <member name="M:AgencyPro.AccountManager.API.Controllers.v2.CustomerAccountController.Get(System.Guid,System.Int32)">
             <summary>
-                Get acct for the current account manager
+                Gets specific account for current account manager
             </summary>
             <param name="organizationId"></param>
             <param name="accountId"></param>
@@ -154,7 +154,7 @@
         </member>
         <member name="M:AgencyPro.AccountManager.API.Controllers.v2.CustomerAccountController.CreateAccount(System.Guid,AgencyPro.Core.CustomerAccounts.ViewModels.NewCustomerAccountInput)">
             <summary>
-                Create and return a new account
+                Creates a new account
             </summary>
             <param name="organizationId"></param>
             <param name="model"></param>
@@ -162,7 +162,7 @@
         </member>
         <member name="M:AgencyPro.AccountManager.API.Controllers.v2.CustomerAccountController.CreateInternalAccount(System.Guid)">
             <summary>
-            Creates an internal account (buyer account for the current organization)
+                Creates a new internal account (buyer account for the current organization)
             </summary>
             <param name="organizationId"></param>
             <returns></returns>
@@ -177,7 +177,7 @@
         </member>
         <member name="M:AgencyPro.AccountManager.API.Controllers.v2.CustomerAccountController.Deactivate(System.Guid,System.Int32)">
             <summary>
-            deactivates an account
+                Deactivates an account
             </summary>
             <param name="organizationId"></param>
             <param name="number"></param>
@@ -185,7 +185,7 @@
         </member>
         <member name="M:AgencyPro.AccountManager.API.Controllers.v2.CustomerAccountController.CreateComment(System.Guid,System.Int32,AgencyPro.Core.Comments.ViewModels.CommentInput)">
             <summary>
-            Create a comment for the account
+                Create a comment for the account
             </summary>
             <param name="organizationId"></param>
             <param name="number"></param>
@@ -194,7 +194,7 @@
         </member>
         <member name="M:AgencyPro.AccountManager.API.Controllers.v2.CustomerController.GetCustomerList(System.Guid)">
             <summary>
-            Get list of customers
+                Gets all customers that belong to account manager
             </summary>
             <param name="organizationId"></param>
             <returns></returns>

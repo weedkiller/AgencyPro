@@ -338,7 +338,7 @@
         </member>
         <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.ContractorController.DeleteContractor(System.Guid,System.Guid)">
             <summary>
-            removes a person from the contractor role within an organization
+                Removes a person from the contractor role in an organization
             </summary>
             <param name="organizationId"></param>
             <param name="personId"></param>
@@ -346,7 +346,7 @@
         </member>
         <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.ContractorController.GetContractors(System.Guid,AgencyPro.Core.OrganizationPeople.Filters.ContractorFilters)">
             <summary>
-            gets contractors within an organization
+               Gets contractors in an organization
             </summary>
             <param name="organizationId"></param>
             <param name="filters"></param>
@@ -354,7 +354,7 @@
         </member>
         <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.ContractorController.GetContractorStatistics(System.Guid,AgencyPro.Core.OrganizationPeople.Filters.ContractorFilters,AgencyPro.Core.Common.CommonFilters)">
             <summary>
-            gets contractors within an organization
+                Gets contractors in an organization
             </summary>
             <param name="organizationId"></param>
             <param name="filters"></param>
@@ -363,7 +363,7 @@
         </member>
         <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.ContractorController.GetContractor(System.Guid,System.Guid)">
             <summary>
-            Gets contractor record within an organization
+                Gets specific contractor in an organization
             </summary>
             <param name="organizationId"></param>
             <param name="personId"></param>
@@ -371,7 +371,7 @@
         </member>
         <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.ContractorController.UpdateContractor(System.Guid,System.Guid,AgencyPro.Core.OrganizationRoles.ViewModels.OrganizationContractors.OrganizationContractorInput)">
             <summary>
-            update a contractor within an organization
+                Updates a contractor in an organization
             </summary>
             <param name="organizationId"></param>
             <param name="personId"></param>
@@ -380,7 +380,7 @@
         </member>
         <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.ContractorController.UpdateContractorRecruiter(System.Guid,System.Guid,AgencyPro.Core.OrganizationRoles.ViewModels.OrganizationContractors.UpdateContractorRecruiterInput)">
             <summary>
-            update a contractor within an organization
+                Updates a contractor in an organization
             </summary>
             <param name="organizationId"></param>
             <param name="personId"></param>
@@ -389,7 +389,7 @@
         </member>
         <member name="M:AgencyPro.AgencyOwner.API.Controllers.v2.ContractorController.AddContractor(System.Guid,System.Guid,AgencyPro.Core.OrganizationRoles.ViewModels.OrganizationContractors.OrganizationContractorInput)">
             <summary>
-            adds an existing contractor to an organization
+                Adds an existing contractor to an organization
             </summary>
             <param name="organizationId"></param>
             <param name="personId"></param>

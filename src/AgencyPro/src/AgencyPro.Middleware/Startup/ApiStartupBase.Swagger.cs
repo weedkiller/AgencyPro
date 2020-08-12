@@ -49,7 +49,7 @@ namespace AgencyPro.Middleware.Startup
                 // c.OperationFilter<SwaggerRemoveCancellationTokenParameterFilter>();
                 //Set the comments path for the swagger json and ui.
                 var basePath = PlatformServices.Default.Application.ApplicationBasePath;
-                var xmlPath = Path.Combine(basePath, "AgencyPro.API.xml");
+                var xmlPath = Path.Combine(basePath, "Data.API.xml");
                 c.IncludeXmlComments(xmlPath);
 
                 c.SwaggerGeneratorOptions.DescribeAllParametersInCamelCase = true;
