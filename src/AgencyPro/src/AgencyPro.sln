@@ -49,6 +49,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AgencyPro.Customer.API", "A
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AgencyPro.Person.API", "AgencyPro.Person.API\AgencyPro.Person.API.csproj", "{2AA75344-3846-4469-A3C0-31B603072A63}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{05471996-9CDE-4EB2-82DC-B0D6A705C128}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\docs\account.md = ..\..\..\docs\account.md
+		..\..\..\docs\contract.md = ..\..\..\docs\contract.md
+		..\..\..\docs\migrations.md = ..\..\..\docs\migrations.md
+		..\..\..\docs\organization.md = ..\..\..\docs\organization.md
+		..\..\..\docs\person.md = ..\..\..\docs\person.md
+		..\..\..\docs\project.md = ..\..\..\docs\project.md
+		..\..\..\docs\timeentry.md = ..\..\..\docs\timeentry.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -135,6 +146,7 @@ Global
 		{7A0622EB-BCB5-4787-8294-226B15D3F243} = {A0D428B6-EFB9-4AE8-96CF-585EC1295176}
 		{D89F110E-5901-47B3-A4FC-8EF3BF71D192} = {A0D428B6-EFB9-4AE8-96CF-585EC1295176}
 		{2AA75344-3846-4469-A3C0-31B603072A63} = {A0D428B6-EFB9-4AE8-96CF-585EC1295176}
+		{05471996-9CDE-4EB2-82DC-B0D6A705C128} = {259EBA2F-DA9B-46F7-8B32-E66E336DABAE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {01067487-C940-4534-B68B-B2E3A2466044}

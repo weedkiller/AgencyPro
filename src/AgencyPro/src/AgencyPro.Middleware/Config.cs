@@ -20,70 +20,70 @@ namespace AgencyPro.Middleware
                 new ApiResource(ScopeNames.AccountManagerScope, "Account Manager API")
                 {
                     ApiSecrets = new List<Secret>(){
-                        new Secret("trinidad".Sha256())
+                        new Secret("password".Sha256())
                     },
                     UserClaims = { JwtClaimTypes.Scope }
                 },
                 new ApiResource(ScopeNames.AgencyOwnerScope, "Agency Owner API")
                 {
                     ApiSecrets = new List<Secret>(){
-                        new Secret("trinidad".Sha256())
+                        new Secret("password".Sha256())
                     },
                     UserClaims = { JwtClaimTypes.Scope}
                 },
                 new ApiResource(ScopeNames.ProjectManagerScope, "Project Manager API")
                 {
                     ApiSecrets = new List<Secret>(){
-                        new Secret("trinidad".Sha256())
+                        new Secret("password".Sha256())
                     },
                     UserClaims = { JwtClaimTypes.Scope}
                 },
                 new ApiResource(ScopeNames.ContractorScope, "Contractor API")
                 {
                     ApiSecrets = new List<Secret>(){
-                        new Secret("trinidad".Sha256())
+                        new Secret("password".Sha256())
                     },
                     UserClaims = { JwtClaimTypes.Scope}
                 },
                 new ApiResource(ScopeNames.PersonScope, "Person API")
                 {
                     ApiSecrets = new List<Secret>(){
-                        new Secret("trinidad".Sha256())
+                        new Secret("password".Sha256())
                     },
                     UserClaims = { JwtClaimTypes.Scope}
                 },
                 new ApiResource(ScopeNames.MarketerScope, "Marketer API")
                 {
                     ApiSecrets = new List<Secret>(){
-                        new Secret("trinidad".Sha256())
+                        new Secret("password".Sha256())
                     },
                     UserClaims = { JwtClaimTypes.Scope}
                 },
                 new ApiResource(ScopeNames.RecruiterScope, "Recruiter API")
                 {
                     ApiSecrets = new List<Secret>(){
-                        new Secret("trinidad".Sha256())
+                        new Secret("password".Sha256())
                     },
                     UserClaims = { JwtClaimTypes.Scope}
                 },
                 new ApiResource(ScopeNames.CustomerScope, "Customer API")
                 {
                     ApiSecrets = new List<Secret>(){
-                        new Secret("trinidad".Sha256())
+                        new Secret("password".Sha256())
                     },
                     UserClaims = { JwtClaimTypes.Scope}
                 },
                  new ApiResource(ScopeNames.AgencyScope, "Agency API")
                 {
                     ApiSecrets = new List<Secret>(){
-                        new Secret("trinidad".Sha256())
+                        new Secret("password".Sha256())
                     },
                     UserClaims = { JwtClaimTypes.Scope}
                 },
                  new ApiResource(ScopeNames.AdminScope, "Admin API")
                  {
                      ApiSecrets = new List<Secret>(){
-                         new Secret("trinidad".Sha256())
+                         new Secret("password".Sha256())
                      },
                      UserClaims = { JwtClaimTypes.Scope}
                  }

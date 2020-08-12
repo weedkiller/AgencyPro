@@ -1,14 +1,20 @@
+Project Overview
+===
+AgencyPro is a backend to a business management platform that supports multiple business models.  People belong to multiple roles in multiple in different organization and have different access to various business objects based on their role/org membership.
+
+Sections
+---
+- [Person](./docs/person.md)
+- [Organization](./docs/organization.md)
+- [Account](./docs/account.md)
+- [Project](./docs/project.md)
+- [Story](./docs/story.md)
+- [Contract](./docs/organization.md)
+- [Time Entry](./docs/timeentry.md)
+
 Initial Setup
 ---
 1) open solution in VS 2017 Community Edition or higher
-2) set startup projects to include the projects you want to test.
-   - You will be setting multiple *.API* projects to startup at once.
+2) set startup projects to include the projects you want to test.  You will want to include at a bare minimum `AgencyPro.Identity.Api`
 
-Running Migrations
----
-1) open `Package Manager Console`
-2) setup startup project to `AgencyPro.Data`
-2) run `add-migration [Migration Name]`
-3) double check to make sure the migration is correct
-4) run `update-database` to update your local database
-
+> Run migrations manually [Migrations](./docs/migrations.md)
