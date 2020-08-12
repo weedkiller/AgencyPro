@@ -57,6 +57,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{05471996-9
 		..\..\..\docs\organization.md = ..\..\..\docs\organization.md
 		..\..\..\docs\person.md = ..\..\..\docs\person.md
 		..\..\..\docs\project.md = ..\..\..\docs\project.md
+		..\..\..\docs\story.md = ..\..\..\docs\story.md
 		..\..\..\docs\timeentry.md = ..\..\..\docs\timeentry.md
 	EndProjectSection
 EndProject
